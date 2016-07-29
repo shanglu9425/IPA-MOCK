@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Scheduling</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="assets/css/font-icons/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/scheduling.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.2/fullcalendar.min.css">
+
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body class="page-body">
+
+<div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+	<div class="sidebar-menu">
+
+		<div class="sidebar-menu-inner">
+
+			<header class="logo-env">
+
+				<!-- logo -->
+				<div class="logo">
+					<a href="index.html">
+						<h1 style="color: #fff; margin:0;">IPA</h1>
+					</a>
+				</div>
+
+				<!-- logo collapse icon -->
+				<div class="sidebar-collapse">
+					<a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+
+				<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+				<div class="sidebar-mobile-menu visible-xs">
+					<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+			</header>
+
+			<!-- User and Organization -->
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li class="welcome">
+						<span class="title">Welcome John Henderson</span>
+				</li>
+				<li>
+					<a href="logout.html">
+						<i class="entypo-logout"></i>
+						<span class="title">Logout</span>
+					</a>
+				</li>
+				<li>
+					<a href="workgroup.html">
+						<i class="entypo-users"></i>
+						<span class="title">Computer Science</span>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Year switcher -->
+			<ul class="pager year-switcher">
+				<li class="previous"><a href="#"><i class="entypo-left-open-mini"></i></a></li>
+				<li ><a href="#">2016</a></li>
+				<li class="next"><a href="#"><i class="entypo-right-open-mini"></i></a></li>
+			</ul>
+
+			<!-- Sidebar links -->
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li>
+					<a href="courses.html">
+						<i class="entypo-book"></i>
+						<span class="title">Courses</span>
+					</a>
+				</li>
+				<li>
+					<a href="assignments.html">
+						<i class="entypo-user-add"></i>
+						<span class="title">Assignments</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="scheduling.html">
+						<i class="entypo-calendar"></i>
+						<span class="title">Scheduling</span>
+					</a>
+					<ul class="visible">
+						<li><a href="scheduling.html">Fall Quarter 2015</a></li>
+						<li><a href="scheduling.html">Winter Quarter 2016</a></li>
+						<li><a href="scheduling.html">Spring Quarter 2016</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="reports.html">
+						<i class="entypo-newspaper"></i>
+						<span class="title">Reports</span>
+					</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="wrap" ng-app="schedulingApp" ng-cloak>
+		<div class="main-content ng-cloak" ng-controller="SchedulingCtrl">
+			<div class="activity-page-header">
+				<div class="activity-page-title">
+					<h3>Winter Quarter 2016</h3>
+				</div>
+				<div class="activity-filters">
+					<div class="activity-filter-menu">
+						<div class="btn-group pull-right">
+							<button class="btn btn-white btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Filters <span class="caret"></span>
+							</button>
+							<div class="dropdown-menu" style="width: 300px; padding: 0;">
+								<div class="filters-container" stop-event="click">
+									<div class="tags-filter">
+										<h3>Tags</h3>
+										<ul>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper" style="border-color: #bc93be;">
+														<input type="checkbox" id="chk-20" checked="">
+														<div class="checked" style="background: #bc93be;"></div>
+													</label>
+													<label>Undergraduate</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper" style="border-color: #da3146;">
+														<input type="checkbox" id="chk-20" checked="">
+														<div class="checked" style="background: #da3146;"></div>
+													</label>
+													<label>Graduate</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper" style="border-color: #3ea561;">
+														<input type="checkbox" id="chk-20" checked="">
+														<div class="checked" style="background: #3ea561;"></div>
+													</label>
+													<label>Core Course</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="days-filter">
+										<h3>Days</h3>
+										<ul>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Sunday</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Monday</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Tuesday</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Wednesday</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Thursday</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement checked">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Friday</label>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox checkbox-replace color-primary neon-cb-replacement">
+													<label class="cb-wrapper"><input type="checkbox" id="chk-20" checked=""><div class="checked"></div></label>
+													<label>Saturday</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="activity-filter-tokens">
+						<div class="label label-info" ng-repeat="filter in filters">
+							{{ filter.displayName }}
+							<i class="glyphicon glyphicon-remove" ng-click="toggleCheckedSectionGroup(filter.id)"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-group-container">
+				<div class="section-group-list" ng-class="{ 'collapsed': selectedSG.id }">
+					<ul>
+						<li class="section-group-item" ng-repeat="sg in sectionGroups" ng-class="{ 'active': selectedSG.id == sg.id }" ng-click="selectSG(sg)">
+							<div class="section-group-check" ng-click="toggleCheckedSectionGroup(sg.id)" stop-event="click">
+								<i ng-show="checkedSectionGroupIds.indexOf(sg.id) > -1 && selectedSG.id != sg.id" class="sg-checkbox fa fa-check-square-o"></i>
+								<i ng-hide="checkedSectionGroupIds.indexOf(sg.id) > -1 || selectedSG.id == sg.id" class="sg-checkbox fa fa-square-o"></i>
+							</div>
+							<div class="section-group-description">
+								<span>
+									{{ sg.subjectCode }} {{ sg.courseNumber }} - {{ sg.sequenceDescription }}
+								</span>
+								<br />
+								<small class="text-muted">{{ sg.title }}</small>
+								<br />
+								<small class="text-muted">{{ sg.instructor }} - Units: {{ sg.units }} - {{ sg.enrollment[4] }} / {{ getSectionSeatsTotal(sg) }}</small>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="activity-container" ng-class="{ 'collapsed': !selectedSG.id }">
+					<div class="activity-list">
+						<div ng-if="selectedSG.id">
+							<p class="activity-list-header">{{ selectedSG.subjectCode }} {{ selectedSG.courseNumber }} - {{ selectedSG.sequenceDescription }}</p>
+							<ul class="activity-group" style="margin-top: 10px;" ng-repeat="activity in selectedSG.sharedActivities">
+								<li class="activity-item"
+									ng-class="{ 'active': selectedActivity.id == activity.id && selectedActivity.sgId == activity.sgId }"
+									ng-click="selectActivity(activity)">
+										<span>{{ activity.type }}</span>
+										<i class="entypo-minus-circled text-danger pull-right delete-activity"></i>
+								</li>
+								<li class="add-activity">
+									<i class="entypo-plus-circled text-success" style="font-size: 120%;"></i>
+							</ul>
+							<ul>
+								<li class="section-item" ng-repeat="section in selectedSG.sections">
+									<div class="section-pattern">Section {{ section.sequence }}</div>
+									<ul class="activity-group" ng-repeat="activity in section.activities">
+										<li class="activity-item"
+											ng-class="{ 'active': selectedActivity.id == activity.id && selectedActivity.sgId == activity.sgId }"
+											ng-click="selectActivity(activity)">
+												<span>{{ activity.type }}</span>
+												<i class="entypo-minus-circled text-danger pull-right delete-activity"></i>
+												<i class="glyphicon glyphicon-warning-sign pull-right text-warning"
+													data-toggle="tooltip" data-placement="top" tool-pa
+													title="Activity no longer matches standard pattern"
+													ng-show="activity.id == selectedActivity.id && selectedActivity.hasWarning"></i>
+										</li>
+										<li class="add-activity">
+											<i class="entypo-plus-circled text-success" style="font-size: 120%;"></i>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="activity-details">
+						<div ng-show="selectedActivity.id">
+							<p class="activity-details-header">{{ selectedActivity.type }}</p>
+							<form class="form-horizontal">
+								<strong>Location</strong>
+								<hr style="margin-top: 0;" />
+								<div class="form-group">
+									<div class="col-sm-12">
+										<div class="radio">
+											<label>
+												<input type="radio" name="buildingRadios" ng-value="true" ng-model="selectedActivity.isBannerRoom">Banner Selected
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="buildingRadios" ng-value="false" ng-model="selectedActivity.isBannerRoom">Custom
+											</label>
+										</div>
+										<div ng-show="!selectedActivity.isBannerRoom">
+											<select name="test" class="select2" data-allow-clear="true" data-placeholder="Select...">
+												<option></option>
+												<option value="1">Young 100</option>
+												<option value="2">Young 186</option>
+												<option value="3">Young 190</option>
+												<option value="4">Young 263</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<strong>Time</strong>
+								<hr style="margin-top: 0;" />
+								<div class="form-group">
+									<div class="col-sm-12">
+										<div class="radio">
+											<label>
+												<input type="radio" name="buildingRadios" ng-value="0" ng-model="selectedActivity.isStandardTimes">Standard times
+											</label>
+										</div>
+
+										<!-- Standard times -->
+										<div ng-show="selectedActivity.isStandardTimes === 0">
+											<fieldset>
+												<div class="col-sm-4" style="padding: 0px;">
+													<select size="4" class="form-control standard-time"
+													ng-options="duration as (duration + ' min') for (duration,pattern) in standardPatterns"
+													ng-model="selectedActivity.selectedDuration">
+													</select>
+												</div>
+												<div class="control-group col-sm-3" style="padding: 0px 0px 0px 5px;">
+													<select size="4" class="form-control standard-time"
+													ng-options="dayIndicator as getWeekDays(dayIndicator, standardPatterns[selectedActivity.selectedDuration].dayIndicators) for dayIndicator in standardPatterns[selectedActivity.selectedDuration].dayIndicators"
+													ng-model="selectedActivity.dayIndicator">
+													</select>
+												</div>
+												<div class="control-group col-sm-5" style="padding: 0px 0px 0px 5px;">
+													<select size="4" class="form-control standard-time">
+														<option ng-repeat="time in standardPatterns[selectedActivity.selectedDuration].times"
+														ng-selected="time.start === selectedActivity.startTime && time.end === selectedActivity.endTime">
+															{{ getMeridianTime(time.start) }} - {{ getMeridianTime(time.end) }}
+														</option>
+													</select>
+												</div>
+											</fieldset>
+										</div>
+
+										<div class="radio">
+											<label>
+												<input type="radio" name="buildingRadios" ng-value="1" ng-model="selectedActivity.isStandardTimes">Non-standard times
+											</label>
+										</div>
+
+										<!-- Non-standard times -->
+										<div ng-show="selectedActivity.isStandardTimes === 1">
+											<div class="form-group">
+												<div class="input-group">
+													<label class="col-sm-6 control-label">
+														Repeats every
+													</label>
+													<div class="col-sm-5">
+														<div class="input-group">
+															<input type="number" class="form-control" value="1">
+															<span class="input-group-addon">weeks</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-1 col-sm-10">
+													<div class="btn-group btn-group-justified btn-group-sm">
+														<div class="btn-group ng-scope" ng-repeat="day in days track by $index">
+															<button ng-click="toggleDay($index)" ng-class="{'active': selectedActivity.dayIndicator[$index] === '1'}" type="button" class="btn btn-default ng-binding">{{day}}</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-1 col-sm-10">
+													<div class="input-group">
+														<input type="text" class="form-control timepicker" data-template="dropdown" data-show-seconds="true" data-default-time="null" data-show-meridian="true" data-minute-step="5" data-second-step="5" />
+														<div class="input-group-addon">
+															<a href="#"><i class="entypo-clock"></i></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</form>
+
+						</div>
+					</div>
+				</div>
+				<div class="activity-calendar">
+					<activities-calendar></activities-calendar>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<link rel="stylesheet" href="assets/js/select2/select2-bootstrap.css">
+	<link rel="stylesheet" href="assets/js/select2/select2.css">
+
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/TweenMax.min.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+	<script src="assets/js/select2/select2.min.js"></script> <!-- Multiselect library -->
+	<script src="assets/js/bootstrap-timepicker.min.js"></script>
+
+	<!-- Imported scripts on this page -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.2/fullcalendar.min.js"></script>
+	<script src="assets/js/neon-chat.js"></script>
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+	<!-- Angular -->
+	<script src="assets/js/angular.min.js"></script>
+
+	<!-- App -->
+	<script src="assets/app/schedulingApp.js"></script>
+</body>
+</html>

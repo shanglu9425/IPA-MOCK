@@ -1,0 +1,122 @@
+@import "bs-less/variables.less";
+@import "neon-less/variables.less";
+@import "other-less/lesshat.less";
+@import "neon-less/chat.less";
+@import "neon-less/neon-mixins.less";
+
+.page-container .sidebar-menu {
+	width: 200px;
+}
+
+.pager.year-switcher {
+	border-top: 1px solid rgba(69, 74, 84, 0.7);
+	border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+}
+
+.pager.year-switcher li a {
+	background-color: transparent;
+	color: #aaa;
+	border: none;
+}
+
+.pager.year-switcher li a {
+	background-color: transparent;
+	color: #aaa;
+	border: none;
+}
+
+.welcome {
+	padding: 10px 20px;
+}
+
+.sidebar-collapsed .pager.year-switcher li.previous,
+.sidebar-collapsed .pager.year-switcher li.next,
+.sidebar-collapsed .welcome {
+	display: none;
+}
+
+.right-inner-addon {
+	position: relative;
+}
+
+.right-inner-addon i {
+	position: absolute;
+	right: 0px;
+	padding: 8px 12px;
+	pointer-events: none;
+}
+
+.text-warning {
+	color: #f7d227;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+#instructors-table .tile-assignment {
+	position: relative;
+	height: 45px;
+	line-height:.9em;
+	padding: 4px 6px;
+}
+
+#courses-table .tile-assignment {
+	position: relative;
+	height: 30px;
+	padding: 6px;
+}
+
+
+.tile-assignment-details {
+	padding-top: 3px;
+	font-size: 10px;
+	color: rgba(44, 126, 161, .7);
+}
+
+#courses-table .assignment-remove {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #000;
+}
+
+#instructors-table .assignment-remove {
+	position: absolute;
+	right: 0;
+	top: 7px;
+	color: #000;
+}
+
+.page-body #courses-table .select2-container .select2-choice {
+	line-height: 30px;
+	height: 30px;
+}
+
+.page-body #instructors-table .select2-container .select2-choice {
+	line-height: 45px;
+	height: 45px;
+}
+
+#courses-table td {
+	position: relative;
+	padding-top: 2em;
+}
+
+.assignment-seats {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: right;
+	padding: 5px 8px 10px;
+	color: #aaa;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+	border-top: none !important;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice {
+	background: none !important;
+}
