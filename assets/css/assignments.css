@@ -444,6 +444,8 @@
   height: 45px;
   line-height: .9em;
   padding: 4px 6px;
+  float: right;
+  margin-right: 10%;
 }
 #courses-table .tile-assignment {
   position: relative;
@@ -472,10 +474,15 @@
   height: 30px;
 }
 .page-body #instructors-table .select2-container .select2-choice {
-  line-height: 45px;
-  height: 45px;
+  line-height: 30px;
+  height: 30px;
 }
 #courses-table td {
+  position: relative;
+  padding-top: 2em;
+}
+
+#instructors-table td {
   position: relative;
   padding-top: 2em;
 }

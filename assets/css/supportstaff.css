@@ -1,0 +1,49 @@
+.border-bottom--gray {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    padding-bottom: 10px;
+}
+
+.tile-assignment {
+    text-align: center;
+    width: 40%;
+}
+/* bootstrap overwrite */
+.btn-default {
+    /*margin-bottom: 17px;*/
+}
+
+.btn-default p {
+    text-align: center;
+}
+
+.table-bordered--white {
+    border: solid white !important;
+}
+
+td {
+    border: 1px solid white !important;
+    border-bottom: 2px solid rgb(235, 235, 235) !important;
+}
+
+#courses-table .tile-assignment {
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+}
+
+.page-body .select2-container {
+    width: 40%;
+    float: left;
+}
+
+.table_header--gray {
+    color: gray;
+}
+.table_header--margin {
+    margin-bottom: 25px;
+}
+/*bootstrap overwrite*/
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}

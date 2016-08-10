@@ -164,9 +164,11 @@
 
 	</div>
 
+	<div class="main-content">
+
 		<!-- modal -->
 	<div style="display: block;" id="modal-1">
-		<div class="modal-dialog">
+		<div class="modal-dialog" style="width:750px;">
 			<div class="modal-content">
 				
 				<div class="modal-header">
@@ -174,11 +176,54 @@
 					<h4 class="modal-title">2016-2017 Teaching Call</h4>
 				</div>
 				
-				<div class="modal-body">
-					Hello I am a Modal!
+				<div class="modal-body" style="flex-flow:row wrap;align-content:stretch;">
+				<!-- button -->
+						<div class="btn-group row" data-toggle="buttons" style="flex:0 1 100%;order:1;margin-bottom:10px;margin:5px;">
+							<label class="btn btn-white btn-sm active" id="courses-pivot">
+								<input type="radio" name="options">
+								<span></span> Senate
+								</label>
+							<label class="btn btn-white btn-sm" id="instructors-pivot">
+									<input type="radio" name="options">
+									<span></span> Federation
+							</label>
+						</div>
+						<div class="row" style="display:flex;">	
+						<div style="flex:0 1 40%;order:2;margin:5px;"> 
+							<textarea class="form-control" rows="5" id="comment"></textarea>
+							 <div class="checkbox"> 
+							<label class="checkbox-inline"><input type="checkbox" value="" style="top: -2px;">Ask for unavailabilities</label>
+							</div>
+						</div>
+						<div style="flex:0 1 5%;order:3;margin:5px;"> 
+						</div>
+						<div style="flex:0 1 45%;order:4;margin:5px;">
+							<label>Due Date</label>
+							<div class="input-group date" data-provide="datepicker" style="flex: 1 1 auto;">
+								<input type="text" class="form-control">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-th"></span>
+							</div>
+							</div>
+							<div style="margin-top: 10px;">
+							<label>Set Term</label>
+						<button class="btn btn-white btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Select Term <span class="caret"></span>
+							</button>
+							</div>
+							
+								
+								
+						</div>
+						</div>		
+			<!-- button ends -->
 				</div>
 				
 				<div class="modal-footer">
+					<div style="flex:0 1 40%;order:2;margin-bottom:30px;"> 
+						<h5 class="pull-left">E-mail Message</h5>
+						<textarea class="form-control" rows="5" id="comment"></textarea>
+					</div>
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					<button type="button" class="btn btn-info">Save changes</button>
 				</div>
@@ -186,9 +231,6 @@
 		</div>
 	</div>
 	<!-- modal ends -->
-
-
-	<div class="main-content">
 		<h3>Support Staff Assignments</h3>
 		<br />
 
