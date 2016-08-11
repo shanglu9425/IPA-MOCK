@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+
+	<link rel="icon" href="assets/images/favicon.ico">
+
+	<title>Instructional Planning and Administration - Assignments</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/assignments.css">
+	<link rel="stylesheet" href="assets/css/supportstaff.css">
+	<link rel="stylesheet" href="assets/css/modal.css">
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/bootstrap-datepicker.js"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body class="page-body" >
+	<script type="text/javascript">
+		jQuery( document ).ready( function( $ ) {
+			$('#courses-pivot').on('click', function(e) {
+				console.log('showing courses');
+				$('#courses-table').show();
+				$('#instructors-table').hide();
+			});
+			$('#instructors-pivot').click(function(e) {
+				console.log('showing instructors');
+				$('#courses-table').hide();
+				$('#instructors-table').show();
+			});
+		} );
+
+		/* button */
+				jQuery( document ).ready( function( $ ) {
+			$('.ta-pivot').on('click', function(e) {
+				console.log('showing ta');
+				$('.ta').show();
+				$('.readers').hide();
+			});
+			$('.readers-pivot').click(function(e) {
+				console.log('showing readers');
+				$('.readers').show();
+				$('.ta').hide();
+			});
+		} );
+		
+
+		
+
+	</script>
+
+<div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+	<div class="sidebar-menu">
+
+		<div class="sidebar-menu-inner">
+
+			<header class="logo-env">
+
+				<!-- logo -->
+				<div class="logo">
+					<a href="index.html">
+						<h1 style="color: #fff; margin:0;">IPA</h1>
+					</a>
+				</div>
+
+				<!-- logo collapse icon -->
+				<div class="sidebar-collapse">
+					<a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+
+				<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+				<div class="sidebar-mobile-menu visible-xs">
+					<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+			</header>
+
+			<!-- User and Organization -->
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li class="welcome">
+						<span class="title">Welcome John Henderson</span>
+				</li>
+				<li>
+					<a href="logout.html">
+						<i class="entypo-logout"></i>
+						<span class="title">Logout</span>
+					</a>
+				</li>
+				<li>
+					<a href="workgroup.html">
+						<i class="entypo-users"></i>
+						<span class="title">Computer Science</span>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Year switcher -->
+			<ul class="pager year-switcher">
+				<li class="previous"><a href="#"><i class="entypo-left-open-mini"></i></a></li>
+				<li ><a href="#">2016</a></li>
+				<li class="next"><a href="#"><i class="entypo-right-open-mini"></i></a></li>
+			</ul>
+
+			<!-- Sidebar links -->
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li>
+					<a href="courses.html">
+						<i class="entypo-book"></i>
+						<span class="title">Courses</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="assignments.html">
+						<i class="entypo-user-add"></i>
+						<span class="title">Assignments</span>
+					</a>
+				</li>
+				<li>
+					<a href="scheduling.html">
+						<i class="entypo-calendar"></i>
+						<span class="title">Scheduling</span>
+					</a>
+					<ul class="visible">
+						<li><a href="scheduling.html">Fall Quarter 2015</a></li>
+						<li><a href="scheduling.html">Winter Quarter 2016</a></li>
+						<li><a href="scheduling.html">Spring Quarter 2016</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="reports.html">
+						<i class="entypo-newspaper"></i>
+						<span class="title">Reports</span>
+					</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="main-content">
+
+		<!-- modal -->
+	<div style="display: block;" id="modal-1">
+		<div class="modal-dialog teaching-call-width">
+			<div class="modal-content">
+				
+				<div class="modal-header teaching-call_header-style">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">2016-2017 Teaching Call</h4>
+				</div>
+				<!-- modal-body -->
+				<div class="modal-body">
+					<!-- button -->
+					<div class="row btn-group btn-group_position container-fluid" data-toggle="buttons">
+						<label class="btn btn-white btn-sm active" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span> Senate
+						</label>
+							<label class="btn btn-white btn-sm" id="instructors-pivot">
+								<input type="radio" name="options">
+								<span></span> Federation
+							</label>
+					</div>
+					<!-- button ends-->
+						<div class="row flex-box container-fluid">	
+							<!-- faculty member info-->
+							<div class="teaching-call_info-style"> 
+								<textarea class="form-control" rows="5" id="comment" style="height: 115px;"></textarea>
+								<div class="checkbox"> 
+									<label class="checkbox-inline"><input type="checkbox" value="">Ask for unavailabilities</label>
+								</div>
+							</div>
+							<!-- faculty member info ends-->
+							<!-- empty flex-box -->
+							<div style="flex:0 1 5%;"> 
+							</div>
+							<!-- empty flex-box ends-->
+							<!-- select dates&terms-->
+							<div class="teaching-call_info-style container-fluid">
+								<h5 style="margin-top: 0px;">Due Date</h5>
+								<div class="input-group date" data-provide="datepicker" >
+									<input type="text" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy">
+									<div class="input-group-addon">
+										<span class="glyphicon glyphicon-th"></span>
+									</div>
+								</div>
+								<div>
+									<h5>Set Term</h5>
+									<button class="btn btn-white btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Select Term <span class="caret"></span>
+									</button>
+								</div>	
+							</div>
+							<!-- select dates&terms ends-->
+						</div>		
+					</div>
+					<!-- modal-body ends -->
+					<!-- modal-footer ends -->
+				<div class="modal-footer teaching-call_footer">
+					<div class="email-style container-fluid"> 
+						<h5 class="pull-left">Email Message</h5>
+						<textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment"></textarea>
+					</div>
+					<button type="button" class="btn btn-default">Begin Without Email</button>
+					<button type="button" class="btn btn-info">Next</button>
+				</div>
+				<!-- modal-footer ends -->
+				
+			</div>
+		</div>
+	</div>
+	<!-- modal ends -->
+		<h3>Support Staff Assignments</h3>
+		<br />
+
+		<!-- <div class="row" style="margin-bottom: 2em;"> //search bar
+			<div class="col-sm-offset-3 col-sm-6">
+				<input type="search" class="form-control" placeholder="Search" />
+			</div>
+		</div> -->
+
+		<div class="row" style="margin-bottom: 1em;">
+			<div class="col-sm-12" style="display: flex;">
+				<div class="btn-group border-bottom--gray" data-toggle="buttons" style="flex: 1 1 auto;">
+					<label class="btn btn-white btn-sm active" id="courses-pivot">
+						<input type="radio" name="options">
+						<span class="tool-icon glyphicon glyphicon-education"></span> By Course
+					</label>
+					<label class="btn btn-white btn-sm" id="instructors-pivot">
+						<input type="radio" name="options">
+						<span class="tool-icon glyphicon glyphicon-user"></span> By People
+					</label>
+				</div>
+				<div class="border-bottom--gray" style="align-self: flex-end;">
+					<span>Psychology Fall 2017</span>
+				</div>	
+			</div>
+		</div>
+
+		<table class="table table-bordered table-bordered--white datatable" id="courses-table">
+			<colgroup>
+				<col span="1" style="width: 40%;">
+				<col span="1" style="width: 60%;">
+			</colgroup>
+			<thead>
+			</thead>
+			<tbody>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">PSC 001 Introduction to Psychology - 001</span> <br /><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+								Seat: 2421
+							</div><br />
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;">Units: 4</li> 
+								<li style="color: green; padding-bottom: 10px;">TA: 5/5</li>
+								<li style="color: red;">Reader: 0/5</li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="btn-group" data-toggle="buttons" style="display: flex;margin-bottom: 25px;">
+							<label class="btn btn-white btn-sm active ta-pivot">
+								<input type="radio" name="options">
+								Course TA
+							</label>
+							<label class="btn btn-white btn-sm readers-pivot">
+								<input type="radio" name="options">
+								Reader
+							</label>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment readers">
+							<p>Lu, Sammy</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">Sagit, Bob</option>
+								<option value="2">Johnson, Smith</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3">McCormick, Janet</option>
+								<option value="4">McGlophlin, Sarah</option>
+								<option value="5">Brown, Suzi</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">PSC 001 Introduction to Psychology - 002</span> <br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+								Seat: 2421
+							</div><br />
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;">Units: 4</li> 
+								<li style="color: green; padding-bottom: 10px;">TA: 5/5</li>
+								<li style="color: red;">Reader: 0/5</li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="btn-group" data-toggle="buttons" style="display: flex;margin-bottom: 25px;">
+							<label class="btn btn-white btn-sm active ta-pivot">
+								<input type="radio" name="options">
+								Course TA
+							</label>
+							<label class="btn btn-white btn-sm readers-pivot">
+								<input type="radio" name="options">
+								Reader
+							</label>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>McCormick, Janet</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">Sagit, Bob</option>
+								<option value="2">Johnson, Smith</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3">Lu, Sammy</option>
+								<option value="4">McGlophlin, Sarah</option>
+								<option value="5">Brown, Suzi</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">PSC 113 Development Psychobiol - A Series</span><br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+								Seat: 2421
+							</div><br />
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;">Units: 4</li> 
+								<li style="color: green; padding-bottom: 10px;">TA: 5/5</li>
+								<li style="color: red;">Reader: 0/5</li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="btn-group" data-toggle="buttons" style="display: flex;margin-bottom: 25px;">
+							<label class="btn btn-white btn-sm active ta-pivot">
+								<input type="radio" name="options">
+								Course TA
+							</label>
+							<label class="btn btn-white btn-sm readers-pivot">
+								<input type="radio" name="options">
+								Reader
+							</label>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Brown, Suzi</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder=" Add Teaching Assistants">
+							<option></option>
+						</select>
+					</td>
+				</tr>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">PSC 113 Development Psychobiol - B Series</span><br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+								Seat: 2421
+							</div><br />
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;">Units: 4</li> 
+								<li style="color: green; padding-bottom: 10px;">TA: 5/5</li>
+								<li style="color: red;">Reader: 0/5</li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="btn-group" data-toggle="buttons" style="display: flex;margin-bottom: 25px;">
+							<label class="btn btn-white btn-sm ta-pivot active">
+								<input type="radio" name="options">
+								Course TA
+							</label>
+							<label class="btn btn-white btn-sm readers-pivot">
+								<input type="radio" name="options">
+								Reader
+							</label>
+						</div>
+						<div class="alert alert-info tile-assignment ta">
+							<p>Johnson, Smith</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<div class="alert alert-info tile-assignment readers">
+							<p>Jerry, Smith</p>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">Sagit, Bob</option>
+								<option value="2">Lu, Sammy</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3">McCormick, Janet</option>
+								<option value="4">McGlophlin, Sarah</option>
+								<option value="5">Brown, Suzi</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- by course end -->
+
+		<table class="table table-bordered .table-bordered--white datatable" id="instructors-table" style="display: none;">
+			<colgroup>
+				<col span="1" style="width: 40%;">
+				<col span="1" style="width: 60%;">
+			</colgroup>
+			<tbody>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">Brown, Suzi</span><br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+							Master
+							</div><br></br>
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;"><p>Teaching Experience:</p></li> 
+								<li style="padding-bottom: 10px;"><p>Comments:</p></li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-info tile-assignment">
+							<p>PSC 113 - A Series</p>
+							<div class="tile-assignment-details">
+								<small>Seats: 75</small>
+								<br />
+								<small>Units: 3</small>
+							</div>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">PSC 113 - B Series</option>
+								<option value="3">BUYOUT</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="4">COURSE RELEASE</option>
+								<option value="4">SABBATICAL</option>
+								<option value="3">PSC 001 - 001 </option>
+								<option value="4">PSC 001 - 002 </option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">Johnson, Smith</span><br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+							Master
+							</div><br></br>
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;"><p>Teaching Experience:</p></li> 
+								<li style="padding-bottom: 10px;"><p>Comments:</p></li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-info tile-assignment">
+							<p>PSC 113 - B Series</p>
+							<div class="tile-assignment-details">
+								<small>Seats: 40</small>
+								<br />
+								<small>Units: 3</small>
+							</div>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">PSC 113 - A Series</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3">BUYOUT</option>
+								<option value="4">COURSE RELEASE</option>
+								<option value="4">SABBATICAL</option>
+								<option value="3">PSC 001 - 001 </option>
+								<option value="4">PSC 001 - 002 </option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">Lu, Sammy</span><br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+							Master
+							</div><br></br>
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;"><p>Teaching Experience:</p></li> 
+								<li style="padding-bottom: 10px;"><p>Comments:</p></li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-info tile-assignment">
+							<p>PSC 001 - 001</p>
+							<div class="tile-assignment-details">
+								<small>Seats: 200</small>
+								<br />
+								<small>Units: 4</small>
+							</div>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">PSC 001 - 002</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3">BUYOUT</option>
+								<option value="4">COURSE RELEASE</option>
+								<option value="4">SABBATICAL</option>
+								<option value="3">PSC 113 - A Series </option>
+								<option value="4">PSC 113 - B Series </option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr class="odd gradeX">
+					<td>
+						<span style="font-size: 11pt;color: black">McCormick, Janet</span><br><br/>
+						<div class="label ng-binding ng-scope" style="padding: 4px;background-color: #373e4a;font-size: 12px;margin-bottom: 10px;">
+							Master
+							</div><br></br>
+						<div>
+							<ul style="list-style: outside none none; padding-left: 0px;">
+								<li style="padding-bottom: 10px;"><p>Teaching Experience:</p></li> 
+								<li style="padding-bottom: 10px;"><p>Comments:</p></li>
+							</ul>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-info tile-assignment">
+							<p>PSC 001 - 002</p>
+							<div class="tile-assignment-details">
+								<small>Seats: 150</small>
+								<br />
+								<small>Units: 4</small>
+							</div>
+							<i class=" btn glyphicon glyphicon-remove assignment-remove text-primary" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Unassign" data-container="body"></i>
+						</div>
+						<select name="test" class="select2" data-allow-clear="true" data-placeholder="Assign Courses">
+							<option></option>
+							<optgroup label="Interested">
+								<option value="1">PSC 001 - 001</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option value="3">BUYOUT</option>
+								<option value="4">COURSE RELEASE</option>
+								<option value="4">SABBATICAL</option>
+								<option value="3">PSC 113 - A Series </option>
+								<option value="4">PSC 113 - B Series </option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+
+	</div>
+
+
+
+	<link rel="stylesheet" href="assets/js/select2/select2-bootstrap.css">
+	<link rel="stylesheet" href="assets/js/select2/select2.css">
+
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/TweenMax.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/select2/select2.min.js"></script> <!-- Multiselect library -->
+	<script src="assets/js/neon-api.js"></script>
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+</body>
+</html>

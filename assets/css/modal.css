@@ -1,0 +1,44 @@
+/*modal css*/
+.flex-box {
+    display: flex;
+}
+
+.btn-group_position{
+    flex:0 1 100%;
+    margin-bottom:10px;
+}
+
+.teaching-call_header-style {
+    background: #303641;
+}
+
+.teaching-call_header-style h4 {
+    color: white;
+}
+
+.teaching-call_header-style button {
+    color: white;
+    opacity: 1;
+}
+
+.teaching-call-width {
+    width: 750px;
+}
+
+.teaching-call_info-style {
+    flex:0 1 45%;
+}
+
+.teaching-call_footer {
+    background-color: rgb(248, 248, 248);
+}
+
+.checkbox-inline input{
+    top: -2px !important;
+}
+
+.email-style {
+    margin-bottom:30px;
+    text-align: left;
+
+}

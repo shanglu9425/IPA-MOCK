@@ -20,8 +20,11 @@
 	<link rel="stylesheet" href="assets/css/neon-forms.css">
 	<link rel="stylesheet" href="assets/css/assignments.css">
 	<link rel="stylesheet" href="assets/css/supportstaff.css">
+	<link rel="stylesheet" href="assets/css/modal.css">
 
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/bootstrap-datepicker.js"></script>
 
 	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -61,6 +64,9 @@
 				$('.ta').hide();
 			});
 		} );
+		
+
+		
 
 	</script>
 
@@ -168,69 +174,42 @@
 
 		<!-- modal -->
 	<div style="display: block;" id="modal-1">
-		<div class="modal-dialog" style="width:750px;">
+		<div class="modal-dialog teaching-call-width">
 			<div class="modal-content">
-				
-				<div class="modal-header">
+				<div class="modal-header teaching-call_header-style">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h4 class="modal-title">2016-2017 Teaching Call</h4>
 				</div>
-				
-				<div class="modal-body" style="flex-flow:row wrap;align-content:stretch;">
-				<!-- button -->
-						<div class="btn-group row" data-toggle="buttons" style="flex:0 1 100%;order:1;margin-bottom:10px;margin:5px;">
-							<label class="btn btn-white btn-sm active" id="courses-pivot">
-								<input type="radio" name="options">
-								<span></span> Senate
-								</label>
-							<label class="btn btn-white btn-sm" id="instructors-pivot">
-									<input type="radio" name="options">
-									<span></span> Federation
-							</label>
-						</div>
-						<div class="row" style="display:flex;">	
-						<div style="flex:0 1 40%;order:2;margin:5px;"> 
-							<textarea class="form-control" rows="5" id="comment"></textarea>
-							 <div class="checkbox"> 
-							<label class="checkbox-inline"><input type="checkbox" value="" style="top: -2px;">Ask for unavailabilities</label>
-							</div>
-						</div>
-						<div style="flex:0 1 5%;order:3;margin:5px;"> 
-						</div>
-						<div style="flex:0 1 45%;order:4;margin:5px;">
-							<label>Due Date</label>
-							<div class="input-group date" data-provide="datepicker" style="flex: 1 1 auto;">
-								<input type="text" class="form-control">
-							<div class="input-group-addon">
-								<span class="glyphicon glyphicon-th"></span>
-							</div>
-							</div>
-							<div style="margin-top: 10px;">
-							<label>Set Term</label>
-						<button class="btn btn-white btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Select Term <span class="caret"></span>
-							</button>
-							</div>
-							
-								
-								
-						</div>
-						</div>		
-			<!-- button ends -->
+				<div class="modal-body">
+					<div class="row container-fluid">	
+							<h5>Teaching Call will only limited to these terms</h5>
+							Fall 2016<br>
+							Winter 2016<br>
+							Spring 2016<br>
+					</div>		
 				</div>
 				
-				<div class="modal-footer">
-					<div style="flex:0 1 40%;order:2;margin-bottom:30px;"> 
-						<h5 class="pull-left">E-mail Message</h5>
-						<textarea class="form-control" rows="5" id="comment"></textarea>
+				<div class="modal-footer teaching-call_footer">
+					<div class="email-style container-fluid"> 
+					<h5>Email sent to Instructor</h5>
+						<div class="list-group-item">
+							<h5 class="text-muted">Subject:</h5>
+							<p class="text-muted" style="display:inline;">Reminder for IPA Due Day</p>	
+							<h5 class="text-muted">Body:</h5>
+							<p class="text-muted">
+							Faculties, Just a quick reminder your IPA is due in couple weeks. Pleas complete your IPA assignments by 8/21/16. Any late submission
+							will result in placing into lower priority category. Thanks you!<br>
+							-LINK TO TEACHING CALL-
+						</div>
 					</div>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-info">Save changes</button>
+					<button type="button" class="btn btn-default">Back</button>
+					<button type="button" class="btn btn-info">Create</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- modal ends -->
+	
 		<h3>Support Staff Assignments</h3>
 		<br />
 
@@ -636,6 +615,7 @@
 				</tr>
 			</tbody>
 		</table>
+		
 
 	</div>
 
