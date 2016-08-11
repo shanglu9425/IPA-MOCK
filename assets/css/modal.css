@@ -16,7 +16,7 @@
     color: white;
 }
 
-.teaching-call_header-style button {
+.teaching-call_header-style button { /*assign style to "x" button */
     color: white;
     opacity: 1;
 }
@@ -40,5 +40,4 @@
 .email-style {
     margin-bottom:30px;
     text-align: left;
-
 }
