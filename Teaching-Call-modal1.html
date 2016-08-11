@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="assets/css/neon-theme.css">
 	<link rel="stylesheet" href="assets/css/neon-forms.css">
 	<link rel="stylesheet" href="assets/css/assignments.css">
-	<link rel="stylesheet" href="assets/css/supportstaff.css">
 	<link rel="stylesheet" href="assets/css/modal.css">
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<script src="assets/js/bootstrap.js"></script>
@@ -173,17 +172,17 @@
 
 		<!-- modal -->
 	<div style="display: block;" id="modal-1">
-		<div class="modal-dialog teaching-call-width">
+		<div class="modal-dialog teaching-call--width">
 			<div class="modal-content">
 				
-				<div class="modal-header teaching-call_header-style">
+				<div class="modal-header teaching-call--header_style">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h4 class="modal-title">2016-2017 Teaching Call</h4>
 				</div>
 				<!-- modal-body -->
 				<div class="modal-body">
 					<!-- button -->
-					<div class="row btn-group btn-group_position container-fluid" data-toggle="buttons">
+					<div class="row btn-group btn-group--position container-fluid" data-toggle="buttons">
 						<label class="btn btn-white btn-sm active" id="courses-pivot">
 							<input type="radio" name="options">
 							<span></span> Senate
@@ -196,7 +195,7 @@
 					<!-- button ends-->
 						<div class="row flex-box container-fluid">	
 							<!-- faculty member info-->
-							<div class="teaching-call_info-style"> 
+							<div class="teaching-call--info_style"> 
 								<textarea class="form-control" rows="5" id="comment" style="height: 115px;"></textarea>
 								<div class="checkbox"> 
 									<label class="checkbox-inline"><input type="checkbox" value="">Ask for unavailabilities</label>
@@ -207,9 +206,9 @@
 							<div style="flex:0 1 5%;"> 
 							</div>
 							<!-- empty flex-box ends-->
-							<!-- select dates&terms-->
-							<div class="teaching-call_info-style container-fluid">
-								<h5 style="margin-top: 0px;">Due Dates</h5>
+							<!-- select dates&terms section-->
+							<div class="teaching-call--info_style container-fluid">
+								<h5 style="margin-top: 0px;">Due Date</h5>
 								<div class="input-group date" data-provide="datepicker" >
 									<input type="text" class="form-control" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy">
 									<div class="input-group-addon">
@@ -223,12 +222,12 @@
 									</button>
 								</div>	
 							</div>
-							<!-- select dates&terms ends-->
+							<!-- select dates&terms section ends-->
 						</div>		
 					</div>
 					<!-- modal-body ends -->
-					<!-- modal-footer ends -->
-				<div class="modal-footer teaching-call_footer">
+					<!-- modal-footer -->
+				<div class="modal-footer modal-footer--teaching-call">
 					<div class="email-style container-fluid"> 
 						<h5 class="pull-left">Email Message</h5>
 						<textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment"></textarea>
