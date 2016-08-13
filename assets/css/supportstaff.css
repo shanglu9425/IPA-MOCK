@@ -48,6 +48,13 @@ td {
     margin-right: 0px;
 }
 
+.popover-content {
+    color: gray;
+}
+
+.select2 {
+    text-align: center;
+}
 
 
 
