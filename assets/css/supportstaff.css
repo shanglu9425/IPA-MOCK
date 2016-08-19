@@ -56,5 +56,63 @@ td {
     text-align: center;
 }
 
+.select2-result-label {
+    padding: 5px 25px;
+}
+
+.select2-result-label:hover {
+    background: #f3f3f3;
+    color: #303641;
+}
+
+.select2-result-label-title {
+    padding: 4px 15px;
+    margin: 0;
+    cursor: inherit;
+    min-height: 1em;
+    color: black;
+    font-weight:bold;
+}
+
+.panel-options-drop_down {
+    width: 60px;
+    text-align: center;
+    background: none !important;
+    padding: 5px;
+}
+
+.panel-heading .panel-options {
+    padding: 5px 0px 5px 0px;
+}
+
+.panel-primary > .panel-heading > .panel-options > a {
+    padding: 0px;
+    margin: 0px;
+}
 
 
+.check-box-TA-call {
+    font-size: 7pt;
+    line-height: 2;
+}
+
+/* some overwrite */
+
+.form-groups-bordered > .form-group {
+    border-bottom: none;
+}
+
+.selectboxit .selectboxit-option-icon-container {
+    margin-left: 15% !important;
+}
+
+.page-body .selectboxit-container .selectboxit-options > span.selectboxit-optgroup-header {
+    color: white;
+    background: rgb(55, 62, 74);
+}
+
+.tile-assignment_add-course {
+    height: 30px !important;
+    padding: 6px !important;
+    line-height: 17.15px !important;
+}

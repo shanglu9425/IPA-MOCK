@@ -42,6 +42,21 @@
     text-align: left;
 }
 
+.ta-slot--width {
+    width: 450px;
+}
+
+/* modal overwrite */
+.modal .modal-header .close {
+    background: none;
+    display: inline-block;
+    padding: 0px 5px;
+    line-height: 1;
+    color: white;
+    zoom: 1;
+    opacity: 1 !important;
+}
+
 /*bootstrap overwrite*/
 .row {
     margin-left: 0px;
