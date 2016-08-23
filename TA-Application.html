@@ -32,28 +32,23 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
-
 </head>
 <body class="page-body" >
-		<!-- modal -->
-	<div style="display: block; background-color: black;" id="modal-1" class="modal">
+	<!-- modal -->
+	<div id="modal-1" class="modal ta-application--header_style">
 		<div class="modal-dialog teaching-call--width">
 			<div class="modal-content">
-				
 				<div class="modal-header teaching-call--header_style">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h4 class="modal-title">2016-2017 Teaching Call</h4>
 				</div>
 				<!-- modal-body -->
 				<div class="modal-body">
-					<div class="row container-fluid">
-							<h5>TA Eligibility Requirements</h5>
-					</div>
 						<div class="row flex-box container-fluid">	
-							<!-- faculty member info-->
-							<div class="ta-application--info_style"> 
-								<p style="font-size: 7pt; padding-top: 8px;">
+							<!-- TA requirement-->
+							<div class="ta-application--info_flex"> 
+								<h5>TA Eligibility Requirements</h5>
+								<p class="ta-application--requirement_style">
 									Full-time (12 unites) registered graduate student,
 									current cumulative GPA is 3.00 or higher, total 
 									appointments for this quarter does not exceed 75%,
@@ -62,31 +57,65 @@
 									<label class="checkbox-inline"><input type="checkbox">Satisfied TA eligibale requirements</label>
 								</div>
 							</div>
-							<!-- faculty member info ends-->
+							<!-- TA requirement ends-->
 							<!-- empty flex-box -->
-							<div style="flex:0 1 5%;"> 
+							<div class="empty_flex_box-ta-application"> 
 							</div>
 							<!-- empty flex-box ends-->
-							<!-- select dates&terms section-->
+							<!-- select dates&courses section-->
 							<div class="teaching-call--info_style container-fluid">
 								<h5>Due Date: 08/23/16</h5>
-							<div class="alert alert-info tile-assignment ta">
-								<p>Lu, Sammy</p>
+								<div class="alert alert-info tile-assignment ta_ta-application">
+									<p>PSY 118</p>
+								</div>
+								<div class="alert alert-info tile-assignment ta_ta-application">
+									<p>PSY 118</p>
+								</div>
+								<div class="alert alert-info tile-assignment ta_ta-application">
+									<p>PSY 118</p>
+								</div>
+								<div class="alert alert-info tile-assignment ta_ta-application">
+									<p>PSY 118</p>
+								</div>
+								<div class="alert alert-info tile-assignment ta_ta-application">
+									<p>PSY 118</p>
+								</div>
+								<div class="ta_ta-application--add-course">
+								<select name="test" class="selectboxit" data-first-option="false">
+									<option>Add preferred courses</option>
+									<optgroup label="Courses">
+										<option value="1">PSY 10</option>
+										<option value="2">PSY 110</option>
+										<option value="3">PSY 120</option>
+										<option value="4">PSY 135</option>
+									</optgroup>
+								</select>
 							</div>
 							</div>
-							<!-- select dates&terms section ends-->
-						</div>		
+							<!-- <!-- select dates&courses section ends-->
+						</div>
 					</div>
 					<!-- modal-body ends -->
 					<!-- modal-footer -->
 				<div class="modal-footer modal-footer--teaching-call">
-					<div class="email-style container-fluid"> 
-						<h5 class="pull-left">Email Message</h5>
-						<textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment"></textarea>
+					<div class="row">
+					<div class="email-style flex-box container-fluid">
+						<div class="ta-application-flex_box"> 
+							<h5 class="pull-left">Teaching Qualifications</h5>
+							<textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment">
+							</textarea>
+						</div>
+						<div class="empty_flex_box-ta-application--text-box"> 
+						</div>
+						<div class="ta-application-flex_box"> 
+							<h5 class="pull-left">Comments</h5>
+							<textarea class="form-control" placeholder="Important: Instructor Name, Due Date,and Quarter Term will all be included." rows="5" id="comment">
+							</textarea>
+						</div>
 					</div>
 					<button type="button" class="btn btn-default">Begin Without Email</button>
 					<button type="button" class="btn btn-info">Next</button>
-				</div>
+					</div>
 				<!-- modal-footer ends -->
 				
 			</div>
@@ -118,13 +147,8 @@
 	<script src="assets/js/resizeable.js"></script>
 	<script src="assets/js/neon-api.js"></script>
 	
-
-
-
 	<!-- JavaScripts initializations and stuff -->
 	<script src="assets/js/neon-custom.js"></script>
-
-
 
 	<!-- Imported scripts on this page -->
 	<script src="assets/js/select2/select2.min.js"></script>

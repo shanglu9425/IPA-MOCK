@@ -7,10 +7,71 @@
     text-align: center;
     width: 40%;
 }
-/* bootstrap overwrite */
-.btn-default {
-    /*margin-bottom: 17px;*/
+
+.flex-course-course-view-swticher {
+    flex: 1 1 auto;
 }
+
+.flex-course-people-swticher {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#align-end {
+    align-self: flex-end;
+}
+
+.info--bg_black {
+    background-color: #373e4a;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.course-info{
+    list-style: outside none none;
+    padding-left: 0px;
+}
+
+.course-info li {
+    padding-bottom: 10px;
+}
+
+.course-info--color_green {
+    color: green;
+}
+
+.course-info--color_red {
+    color: red;
+}
+
+.ta-reader-selector {
+    width: 40%;
+    margin-bottom: 17px;
+    margin-right: 10%;
+    float: right;
+}
+
+.add-new-slot {
+    width: 40%;
+    margin-right: 10%;
+    position: relative;
+    height: 30px;
+    padding: 6px;
+    border: 1px solid #ebebeb;
+}
+
+.ta-info {
+    list-style: outside none none;
+    padding-left: 0px;
+    font-size: 8pt;
+    width: 300px;
+}
+
+.ta-info li {
+    padding-bottom: 10px;
+}
+
+/* bootstrap overwrite */
 
 .btn-default p {
     text-align: center;
@@ -36,21 +97,37 @@ td {
     float: left;
 }
 
-.table_header--gray {
-    color: gray;
+.ta-slot--width {
+    width: 450px;
 }
-.table_header--margin {
-    margin-bottom: 25px;
-}
+
 /*bootstrap overwrite*/
 .row {
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right:0px;
 }
 
 .popover-content {
     color: gray;
 }
+
+.panel-options-drop_down {
+    width: 60px;
+    text-align: center;
+    background: none !important;
+    padding: 5px;
+}
+
+.panel-heading .panel-options {
+    padding: 5px 0px 5px 0px;
+}
+
+.panel-primary > .panel-heading > .panel-options > a {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* some overwrite */
 
 .select2 {
     text-align: center;
@@ -73,30 +150,6 @@ td {
     color: black;
     font-weight:bold;
 }
-
-.panel-options-drop_down {
-    width: 60px;
-    text-align: center;
-    background: none !important;
-    padding: 5px;
-}
-
-.panel-heading .panel-options {
-    padding: 5px 0px 5px 0px;
-}
-
-.panel-primary > .panel-heading > .panel-options > a {
-    padding: 0px;
-    margin: 0px;
-}
-
-
-.check-box-TA-call {
-    font-size: 7pt;
-    line-height: 2;
-}
-
-/* some overwrite */
 
 .form-groups-bordered > .form-group {
     border-bottom: none;

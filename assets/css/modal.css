@@ -3,6 +3,22 @@
     display: flex;
 }
 
+.table_header--gray {
+    color: gray;
+}
+.table_header--margin {
+    margin-bottom: 25px;
+}
+
+.check-box-TA-call {
+    font-size: 7pt;
+    line-height: 2;
+}
+
+.ta-application-flex_box {
+    flex: 0 1 45%;
+}
+
 .btn-group--position{
     flex:0 1 100%;
     margin-bottom: 10px;
@@ -10,6 +26,10 @@
 
 .teaching-call--header_style {
     background: #303641;
+}
+
+.teaching-call--textarea_height {
+	height: 174px !important;
 }
 
 .teaching-call--header_style h4 {
@@ -42,12 +62,56 @@
     text-align: left;
 }
 
-.ta-slot--width {
-    width: 450px;
+.ta_ta-application {
+    position: relative;
+    height: 30px;
+    padding: 6px;
+    float: left;
+    margin-right:20px;
+    width: 80%;
 }
 
-.ta-application--info_style {
+.ta_ta-application--add-course {
+    width: 80%;
+    margin-bottom: 17px;
+    margin-right: 10%;
+}
+
+.ta-application--header_style {
+    display: block;
+    background-color: black;
+}
+
+.ta-application--info_flex {
     flex: 0 1 35%;
+}
+
+.ta-application--requirement_style {
+    font-size: 7pt;
+    padding: 10px 0px 10px 0px;
+}
+
+/* empty flex-box */
+.empty_flex_box-teaching-call {
+    flex:0 1 5%;
+}
+
+.empty_flex_box-ta-application {
+    flex:0 1 15%;
+}
+
+.empty_flex_box-ta-application--text-box {
+    flex:0 1 10%;
+}
+
+.form-control--appointment-time{
+    width: 50px;
+    text-indent: 3px;
+}
+
+.form-control--add-course {
+    width: 150px;
+    text-indent: 10px;
 }
 
 /* modal overwrite */
