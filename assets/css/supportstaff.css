@@ -54,6 +54,7 @@
 .add-new-slot {
     width: 40%;
     margin-right: 10%;
+    margin-bottom: 20px;
     position: relative;
     height: 30px;
     padding: 6px;
@@ -156,7 +157,7 @@ td {
 }
 
 .selectboxit .selectboxit-option-icon-container {
-    margin-left: 15% !important;
+    margin-left: 36% !important;
 }
 
 .page-body .selectboxit-container .selectboxit-options > span.selectboxit-optgroup-header {
@@ -168,4 +169,51 @@ td {
     height: 30px !important;
     padding: 6px !important;
     line-height: 17.15px !important;
+}
+
+
+/* misc */
+
+.width-40 {
+    width: 40%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.icon-remove_person {
+    display: none;
+    color: red;
+    float: right;
+    position: absolute;
+    right: -20px;
+    font-size: 12pt;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+
+.icon-remove_course {
+    display: none;
+    color: red;
+    float: right;
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    font-size: 12pt;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+
+
+.tile-assignment:hover .icon-remove_person {
+  display: block !important;
+}
+
+.tile-assignment:hover .icon-remove_course {
+  display: block !important;
 }
