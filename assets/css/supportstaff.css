@@ -184,7 +184,7 @@ td {
 
 .icon-remove_person {
     display: none;
-    color: red;
+    color: #ee4749;
     float: right;
     position: absolute;
     right: -20px;
@@ -197,7 +197,7 @@ td {
 
 .icon-remove_course {
     display: none;
-    color: red;
+    color: #ee4749;
     float: right;
     position: absolute;
     top: 8px;
@@ -216,4 +216,8 @@ td {
 
 .tile-assignment:hover .icon-remove_course {
   display: block !important;
+}
+
+.tile-assignment--poniter {
+    cursor: pointer;
 }
