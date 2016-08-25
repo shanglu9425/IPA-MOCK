@@ -74,17 +74,8 @@
 
 /* bootstrap overwrite */
 
-.btn-default p {
-    text-align: center;
-}
-
 .table-bordered--white {
     border: solid white !important;
-}
-
-td {
-    border: 1px solid white !important;
-    border-bottom: 2px solid rgb(235, 235, 235) !important;
 }
 
 #courses-table .tile-assignment {
@@ -106,6 +97,15 @@ td {
 .row {
     margin-left: 0px;
     margin-right:0px;
+}
+
+.btn-default p {
+    text-align: center;
+}
+
+td {
+    border: 1px solid white !important;
+    border-bottom: 2px solid rgb(235, 235, 235) !important;
 }
 
 .popover-content {
@@ -182,7 +182,7 @@ td {
     width: 60%;
 }
 
-.icon-remove_person {
+.icon-remove_person {/* remove person icon */
     display: none;
     color: #ee4749;
     float: right;
@@ -195,7 +195,7 @@ td {
     cursor: pointer;
 }
 
-.icon-remove_course {
+.icon-remove_course {/* remove course icon */
     display: none;
     color: #ee4749;
     float: right;
@@ -211,11 +211,11 @@ td {
 
 
 .tile-assignment:hover .icon-remove_person {
-  display: block !important;
+    display: block !important;
 }
 
 .tile-assignment:hover .icon-remove_course {
-  display: block !important;
+    display: block !important;
 }
 
 .tile-assignment--poniter {

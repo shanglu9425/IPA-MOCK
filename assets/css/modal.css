@@ -68,11 +68,11 @@
     padding: 6px;
     float: left;
     margin-right:20px;
-    width: 80%;
+    width: 100%;
 }
 
 .ta_ta-application--add-course {
-    width: 80%;
+    width: 100%;
     margin-bottom: 17px;
     margin-right: 10%;
 }
@@ -125,8 +125,16 @@
     opacity: 1 !important;
 }
 
+.ta_ta-application--add-course .selectboxit-text {
+margin-left: 6px;
+}
+
 /*bootstrap overwrite*/
 .row {
     margin-left: 0px;
     margin-right: 0px;
+}
+
+.teaching-call--info_style h5 {
+    margin-top: 0px;
 }
