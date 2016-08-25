@@ -24,7 +24,8 @@
 .info--bg_black {
     background-color: #373e4a;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .course-info{
@@ -62,10 +63,12 @@
 }
 
 .ta-info {
-    list-style: outside none none;
-    padding-left: 0px;
     font-size: 8pt;
+    line-height: 20px;
     width: 300px;
+    margin-top: 20px;
+    padding-left: 0px;
+    list-style: outside none none;
 }
 
 .ta-info li {
@@ -170,7 +173,6 @@ td {
     padding: 6px !important;
     line-height: 17.15px !important;
 }
-
 
 /* misc */
 

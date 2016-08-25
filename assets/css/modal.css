@@ -11,8 +11,7 @@
 }
 
 .check-box-TA-call {
-    font-size: 7pt;
-    line-height: 2;
+    font-size: 8pt;
 }
 
 .ta-application-flex_box {
@@ -54,7 +53,7 @@
 }
 
 .checkbox-inline input{
-    top: -2px !important;
+    top: -3px !important;
 }
 
 .email-style {
