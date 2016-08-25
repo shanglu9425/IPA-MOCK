@@ -133,28 +133,6 @@ td {
 
 /* some overwrite */
 
-.select2 {
-    text-align: center;
-}
-
-.select2-result-label {
-    padding: 5px 25px;
-}
-
-.select2-result-label:hover {
-    background: #f3f3f3;
-    color: #303641;
-}
-
-.select2-result-label-title {
-    padding: 4px 15px;
-    margin: 0;
-    cursor: inherit;
-    min-height: 1em;
-    color: black;
-    font-weight:bold;
-}
-
 .form-groups-bordered > .form-group {
     border-bottom: none;
 }

@@ -44,7 +44,7 @@
     width: 750px;
 }
 
-.teaching-call--info_style {
+.teaching-call--info_flex {
     flex:0 1 45%;
 }
 
@@ -82,11 +82,12 @@
 }
 
 .ta-application--info_flex {
-    flex: 0 1 35%;
+    flex: 0 1 45%;
 }
 
 .ta-application--requirement_style {
-    font-size: 7pt;
+    font-size: 9pt;
+    line-height: 15px;
     padding: 10px 0px 10px 0px;
 }
 
@@ -134,6 +135,6 @@ margin-left: 6px;
     margin-right: 0px;
 }
 
-.teaching-call--info_style h5 {
+.teaching-call--info_flex h5 {
     margin-top: 0px;
 }
