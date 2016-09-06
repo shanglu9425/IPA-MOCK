@@ -1,24 +1,39 @@
 .border-bottom--gray {
     border-bottom: 2px solid rgb(235, 235, 235);
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .tile-assignment {
     text-align: center;
     width: 40%;
+    height: 30px;
+    padding: 6px;
+    margin-bottom: 17px;
+    margin-right: 10%;
 }
 
-.flex-course-course-view-swticher {
+.tile-assignment-people {
+    text-align: center;
+    width: 40%;
+    height: 45px;
+    line-height: .9em;
+    padding: 10px 6px;
+    margin-right: 10%;
+}
+
+.view-swticher {
     flex: 1 1 auto;
 }
 
-.flex-course-people-swticher {
+.course-people-swticher {
     display: flex;
+    margin-top: 15px;
     margin-bottom: 25px;
 }
 
 #align-end {
     align-self: flex-end;
+    flex: 0 1 auto;
 }
 
 .info--bg_black {
@@ -141,11 +156,6 @@ td {
     margin-left: 36% !important;
 }
 
-.page-body .selectboxit-container .selectboxit-options > span.selectboxit-optgroup-header {
-    color: white;
-    background: rgb(55, 62, 74);
-}
-
 .tile-assignment_add-course {
     height: 30px !important;
     padding: 6px !important;
@@ -194,10 +204,28 @@ td {
     display: block !important;
 }
 
-.tile-assignment:hover .icon-remove_course {
-    display: block !important;
-}
-
 .tile-assignment--poniter {
     cursor: pointer;
+}
+
+
+.flex-row {
+    display:flex;
+    flex-direction:row;
+}
+
+.flex-row-children {
+    flex: 1 1 auto;
+}
+
+.flex-ta-selector {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+}
+
+.flex-ta-slector-children {
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: row wrap;
 }
