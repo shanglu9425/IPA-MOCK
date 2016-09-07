@@ -12,15 +12,6 @@
     margin-right: 10%;
 }
 
-.tile-assignment-people {
-    text-align: center;
-    width: 40%;
-    height: 45px;
-    line-height: .9em;
-    padding: 10px 6px;
-    margin-right: 10%;
-}
-
 .view-swticher {
     flex: 1 1 auto;
 }
@@ -208,6 +199,15 @@ td {
     cursor: pointer;
 }
 
+.search-flex {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-flex-children {
+    flex: 0 1 35%;
+}
 
 .flex-row {
     display:flex;
