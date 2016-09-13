@@ -246,3 +246,15 @@ td {
 .main-content h3 {
     margin-bottom: 30px;
 }
+
+.course-requriement {
+    color: #2c7ea1;
+    right: 170px;
+    top: 0px;
+    position: absolute;
+}
+
+.course-requriement:hover,
+.course-requriemen:focus {
+    color: #1b4e64;
+}
