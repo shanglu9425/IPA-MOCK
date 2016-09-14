@@ -258,12 +258,12 @@ td {
 
 .course-requriement {
     color: #2c7ea1;
-    right: 170px;
+    right: 172px;
     top: 0px;
     position: absolute;
 }
 
 .course-requriement:hover,
-.course-requriemen:focus {
+.course-requriement:focus {
     color: #1b4e64;
 }
