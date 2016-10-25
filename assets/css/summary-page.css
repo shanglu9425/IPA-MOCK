@@ -133,6 +133,7 @@ body {
     border: 2px solid #00A651;
     color: #00A651;
     line-height: 25px;
+    width: 260px;
 }
 
 .active-indicator-btn:hover {
@@ -146,6 +147,7 @@ body {
     border: 2px solid #FA4848;
     color: #FA4848;
     line-height: 25px;
+    width: 260px;
 }
 
 .nonactive-indicator-btn:hover {

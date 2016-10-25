@@ -1,4 +1,95 @@
 .tacall-grad-student-header {
     text-align: center;
     padding-bottom: 5px;
+    border-bottom: 2px solid rgb(235, 235, 235);
+    padding-bottom: 25px;
+}
+
+.flex-row {
+    display: flex;
+    flex-basis: row;
+}
+
+.ta-requirement {
+    flex: 0 1 30%;
+}
+
+.ta-requirement h4 {
+    margin-top: 20px;
+}
+
+.move-icon {
+    position: absolute;
+    left: -30px;
+    top: 15px;
+    font-size: 15pt;
+    color: #373e4a;
+}
+
+
+/*need organized */
+
+.assignment-info-section {
+    margin-left: 55px;
+}
+
+.assignment-title {
+    margin-bottom: 2px !important;
+}
+
+.assignment-details {
+    padding-top: 3px;
+    font-size: 10px;
+    color: rgba(44, 126, 161, 0.7);
+}
+
+.assignment-detail-info {
+    margin-bottom: 2px;
+    font-size: 8pt;
+}
+
+.course-requriement {
+    color: #2c7ea1;
+    right: 75%;
+    top: -1px;
+    position: absolute;
+}
+
+.assignment_add-course {
+    height: 30px !important;
+    padding: 6px !important;
+    line-height: 17.15px !important;
+}
+
+#people-view .assignment-remove {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #000;
+}
+
+.assignment {
+    text-align: left;
+    position: relative;
+    width: 45%;
+    height: 50px;
+    padding: 10px 6px;
+    line-height: .9em;
+    margin-bottom: 0px !important;
+}
+
+.course-people {
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+
+.flex-selector_style {
+    margin-top: 70px;
+}
+
+.flex-selector-people_view {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
 }
