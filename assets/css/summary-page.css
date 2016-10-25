@@ -3,7 +3,7 @@ body {
 }
 
 .summary-panel-heading {
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #ebebeb;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     display: flex;
@@ -64,17 +64,28 @@ body {
     border-radius: 3px;
     background-clip: padding-box;
     width: 15%;
-    height: 200px;
     position: fixed;
     top: 1.5em;
     right: 2.5em;
+    position: fixed;
+}
+
+.summary-panel-notices .summary-panel-body {
+    padding-top: 10px;
 }
 
 .summary-panel-courses>.summary-panel-heading {
     color: #373e4a;
     background-color: #ffffff;
-    border-color: #ebebeb;
     padding: 0;
+}
+
+.notices-link {
+    color: #00A651;
+}
+
+.notices-link:hover {
+    color: #008d45;
 }
 
 .check-mark-icon {
@@ -84,6 +95,16 @@ body {
 
 .table-border-none>tbody>tr>td {
     line-height: 3;
+}
+
+.notices-list {
+    margin-top: 5px;
+    list-style: none;
+}
+
+.notices-list ul {
+    padding-left: 0px;
+    text-decoration: none;
 }
 
 
@@ -98,14 +119,8 @@ body {
 
 /* future-year view style */
 
-.future-year {
-    color: #d1d1d1;
-}
-
-.future-year h4 {
-    color: #d1d1d1;
-}
-
+.future-year,
+.future-year h4,
 .future-year th {
     color: #d1d1d1;
 }
@@ -139,18 +154,19 @@ body {
     color: white !important;
 }
 
+
+/* term indicator */
+
 .badge-term-indicator {
     position: absolute;
     top: 14px;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     display: inline-block;
     padding: 3px 7px;
     font-size: 12px;
-    font-weight: normal;
     color: #fff;
     line-height: 1;
     white-space: nowrap;
-    text-align: center;
     background-color: #00A651;
 }
