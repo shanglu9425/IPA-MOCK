@@ -439,14 +439,14 @@
 .x-ng-cloak {
   display: none !important;
 }
-#instructors-table .tile-assignment {
+/*#instructors-table .tile-assignment {
   position: relative;
   height: 45px;
   line-height: .9em;
   padding: 10px 6px;
   float: right;
   margin-right: 10%;
-}
+}*/
 #courses-table .tile-assignment {
   position: relative;
   height: 30px;

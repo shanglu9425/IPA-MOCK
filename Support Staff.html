@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/neon-core.css">
     <link rel="stylesheet" href="assets/css/neon-theme.css">
     <link rel="stylesheet" href="assets/css/neon-forms.css">
-    <link rel="stylesheet" href="assets/css/assignments.css">
+    <!--<link rel="stylesheet" href="assets/css/assignments.css">-->
     <link rel="stylesheet" href="assets/css/supportstaff.css">
     <link rel="stylesheet" href="assets/css/modal.css">
     <!-- test css -->
@@ -47,30 +47,17 @@
         jQuery(document).ready(function($) {
             $('#courses-pivot').on('click', function(e) {
                 console.log('showing courses');
-                $('#courses-table').show();
-                $('#instructors-table').hide();
+                $('#courses-view').show();
+                $('#instructors-view').hide();
             });
             $('#instructors-pivot').click(function(e) {
                 console.log('showing instructors');
-                $('#courses-table').hide();
+                $('#courses-view').hide();
                 $('#instructors-table').show();
             });
         });
 
-        /* button */
-        jQuery(document).ready(function($) {
-            $('.ta-pivot').on('click', function(e) {
-                console.log('showing ta');
-                $('.ta').show();
-                $('.readers').hide();
-            });
-            $('.readers-pivot').click(function(e) {
-                console.log('showing readers');
-                $('.readers').show();
-                $('.ta').hide();
-            });
-        });
-        /* test */
+        /* popover */
         jQuery(document).ready(function($) {
             $(".glyphicon-exclamation-sign").mouseleave(function() {
                 $('.popover', this).css('visibility', 'hidden');
@@ -181,7 +168,10 @@
         </div>
 
         <div class="main-content">
-            <h3 class="text-center page-header">Support Staff Assignments</h3>
+            <div class="support-staff-header">
+                <h3>Support Staff Assignments</h3>
+                <p>Psychology Fall 2017</p>
+            </div>
 
             <div class="row">
                 <!-- search bar -->
@@ -194,7 +184,7 @@
             <!-- search bar ends -->
             <div class="row">
                 <div class="container-fluid flex-box">
-                    <div class="btn-group border-bottom--gray view-swticher" data-toggle="buttons">
+                    <div class="btn-group border-bottom--gray view-switcher" data-toggle="buttons">
                         <label class="btn btn-white btn-sm active" id="courses-pivot">
 						<input type="radio" name="options">
 						<span class="tool-icon glyphicon glyphicon-education"></span> By Course
@@ -204,17 +194,26 @@
 						<span class="tool-icon glyphicon glyphicon-user"></span> By People
 					</label>
                     </div>
-                    <div id="align-end" class="border-bottom--gray">
-                        <span>Psychology Fall 2017</span>
+                    <div class="btn-group border-bottom--gray review-switcher" data-toggle="buttons">
+                        <label class="btn btn-white btn-sm active" id="courses-pivot">
+						<input type="radio" name="options">
+                        Open review for instructors
+					</label>
+                        <label class="btn btn-white btn-sm" id="instructors-pivot">
+						<input type="radio" name="options">
+						Open review for graduate students
+					</label>
                     </div>
                 </div>
             </div>
 
-            <div id="courses-table">
+            <div id="courses-view">
+                <!-- first course -->
                 <div class="container-fluid border-bottom--gray">
                     <div class="flex-row">
                         <div class="flex-row-children">
                             <h4>PSC 001 Introduction to Psychology - 001</h4>
+                            <h5>Session 001</h5>
                             <div class="label ng-binding ng-scope info--bg_black">
                                 Seat: 2421
                             </div>
@@ -226,84 +225,152 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="flex-selector">
-                            <div class="btn-group course-people-swticher" data-toggle="buttons">
-                                <label class="btn btn-white btn-sm active ta-pivot">
-									<input type="radio" name="options">
-									Course TA
-								</label>
-                                <label class="btn btn-white btn-sm readers-pivot">
-									<input type="radio" name="options">
-									Reader
-								</label>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course TA
+                                </div>
                             </div>
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
                                     <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
+                                <div class="alert alert-info assignment ">
                                     <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
+                                <div class="alert alert-info assignment ">
                                     <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
                                 </div>
                                 <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
 										<option>Assign 30%</option>
-										<optgroup label="Faculty Preference">
-											<option value="1">John, Loffer</option>
-											<option value="2">Lee, Chris</option>
-											<option value="3">Qi, Ji</option>
-											<option value="4">Jackson, Andrew</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
 										</optgroup>
-										<optgroup label="Master Students">
-											<option value="1">Stans, Crystal</option>
-											<option value="2">Smith, Steven</option>
-											<option value="3">Lee, Yuan</option>
-											<option value="4">Lu, Shang</option>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
 										</optgroup>
 									</select>
                                 </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
 										<option>Assign 30%</option>
-										<optgroup label="Faculty Preference">
-											<option value="1">John, Loffer</option>
-											<option value="2">Lee, Chris</option>
-											<option value="3">Qi, Ji</option>
-											<option value="4">Jackson, Andrew</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
 										</optgroup>
-										<optgroup label="Master Students">
-											<option value="1">Stans, Crystal</option>
-											<option value="2">Smith, Steven</option>
-											<option value="3">Lee, Yuan</option>
-											<option value="4">Lu, Shang</option>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
 										</optgroup>
 									</select>
                                 </div>
                                 <!-- drop down ends-->
                                 <!--add new slot button-->
-                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery('#modal-1').modal('show');">
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
+								Add New TA Slots
+							</a>
+                            </div>
+                        </div>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course Reader
+                                </div>
+                            </div>
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <!-- drop down -->
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                </div>
+                                <!-- drop down ends-->
+                                <!--add new slot button-->
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
+								Add New TA Slots
+							</a>
+                            </div>
+                        </div>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course AI
+                                </div>
+                            </div>
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <div class="alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <!-- drop down -->
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                </div>
+                                <!-- drop down ends-->
+                                <!--add new slot button-->
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
 								Add New TA Slots
 							</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--- test flex ends -->
+                <!-- first course ends-->
+                <!-- second course -->
                 <div class="container-fluid border-bottom--gray">
                     <div class="flex-row">
                         <div class="flex-row-children">
                             <h4>PSC 001 Introduction to Psychology - 001</h4>
+                            <h5>Session 001</h5>
                             <div class="label ng-binding ng-scope info--bg_black">
                                 Seat: 2421
                             </div>
@@ -315,83 +382,151 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="flex-selector">
-                            <div class="btn-group course-people-swticher" data-toggle="buttons">
-                                <label class="btn btn-white btn-sm active ta-pivot">
-									<input type="radio" name="options">
-									Course TA
-								</label>
-                                <label class="btn btn-white btn-sm readers-pivot">
-									<input type="radio" name="options">
-									Reader
-								</label>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course TA
+                                </div>
                             </div>
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
                                     <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
+                                <div class="alert alert-info assignment ">
                                     <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
+                                <div class="alert alert-info assignment ">
                                     <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
                                 </div>
                                 <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
 										<option>Assign 30%</option>
-										<optgroup label="Faculty Preference">
-											<option value="1">John, Loffer</option>
-											<option value="2">Lee, Chris</option>
-											<option value="3">Qi, Ji</option>
-											<option value="4">Jackson, Andrew</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
 										</optgroup>
-										<optgroup label="Master Students">
-											<option value="1">Stans, Crystal</option>
-											<option value="2">Smith, Steven</option>
-											<option value="3">Lee, Yuan</option>
-											<option value="4">Lu, Shang</option>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
 										</optgroup>
 									</select>
                                 </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
 										<option>Assign 30%</option>
-										<optgroup label="Faculty Preference">
-											<option value="1">John, Loffer</option>
-											<option value="2">Lee, Chris</option>
-											<option value="3">Qi, Ji</option>
-											<option value="4">Jackson, Andrew</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
 										</optgroup>
-										<optgroup label="Master Students">
-											<option value="1">Stans, Crystal</option>
-											<option value="2">Smith, Steven</option>
-											<option value="3">Lee, Yuan</option>
-											<option value="4">Lu, Shang</option>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
 										</optgroup>
 									</select>
                                 </div>
                                 <!-- drop down ends-->
                                 <!--add new slot button-->
-                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery('#modal-1').modal('show');">
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
+								Add New TA Slots
+							</a>
+                            </div>
+                        </div>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course Reader
+                                </div>
+                            </div>
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <!-- drop down -->
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                </div>
+                                <!-- drop down ends-->
+                                <!--add new slot button-->
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
+								Add New TA Slots
+							</a>
+                            </div>
+                        </div>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course AI
+                                </div>
+                            </div>
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <div class="alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <!-- drop down -->
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                </div>
+                                <!-- drop down ends-->
+                                <!--add new slot button-->
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
 								Add New TA Slots
 							</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- second course ends -->
                 <div class="container-fluid border-bottom--gray">
                     <div class="flex-row">
                         <div class="flex-row-children">
                             <h4>PSC 001 Introduction to Psychology - 001</h4>
+                            <h5>Session 001</h5>
                             <div class="label ng-binding ng-scope info--bg_black">
                                 Seat: 2421
                             </div>
@@ -404,74 +539,119 @@
                             </div>
                         </div>
 
-                        <div class="flex-selector">
-                            <div class="btn-group course-people-swticher" data-toggle="buttons">
-                                <label class="btn btn-white btn-sm active ta-pivot">
-									<input type="radio" name="options">
-									Course TA
-								</label>
-                                <label class="btn btn-white btn-sm readers-pivot">
-									<input type="radio" name="options">
-									Reader
-								</label>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course TA
+                                </div>
                             </div>
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
-                                    <p>Lu, Sammy</p>
-                                    <a href="#" data-rel="close">
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </a>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>Lu, Sammy</p>
-                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                </div>
+                            <div class="course-people">
                                 <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
 										<option>Assign 30%</option>
-										<optgroup label="Faculty Preference">
-											<option value="1">John, Loffer</option>
-											<option value="2">Lee, Chris</option>
-											<option value="3">Qi, Ji</option>
-											<option value="4">Jackson, Andrew</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
 										</optgroup>
-										<optgroup label="Master Students">
-											<option value="1">Stans, Crystal</option>
-											<option value="2">Smith, Steven</option>
-											<option value="3">Lee, Yuan</option>
-											<option value="4">Lu, Shang</option>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
 										</optgroup>
 									</select>
                                 </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
 										<option>Assign 30%</option>
-										<optgroup label="Faculty Preference">
-											<option value="1">John, Loffer</option>
-											<option value="2">Lee, Chris</option>
-											<option value="3">Qi, Ji</option>
-											<option value="4">Jackson, Andrew</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
 										</optgroup>
-										<optgroup label="Master Students">
-											<option value="1">Stans, Crystal</option>
-											<option value="2">Smith, Steven</option>
-											<option value="3">Lee, Yuan</option>
-											<option value="4">Lu, Shang</option>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
 										</optgroup>
 									</select>
                                 </div>
                                 <!-- drop down ends-->
                                 <!--add new slot button-->
-                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery('#modal-1').modal('show');">
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
+								Add New TA Slots
+							</a>
+                            </div>
+                        </div>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course Reader
+                                </div>
+                            </div>
+                            <div class="course-people">
+                                <div class=" alert alert-info assignment ">
+                                    <p>Lu, Sammy</p>
+                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
+                                </div>
+                                <!-- drop down -->
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                </div>
+                                <!-- drop down ends-->
+                                <!--add new slot button-->
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
+								Add New TA Slots
+							</a>
+                            </div>
+                        </div>
+                        <div class="flex-selector-course_view">
+                            <div class="course-people-swticher">
+                                <div class="preference-title">
+                                    Course AI
+                                </div>
+                            </div>
+                            <div class="course-people">
+                                <!-- drop down -->
+                                <div class="people-selector ">
+                                    <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                </div>
+                                <!-- drop down ends-->
+                                <!--add new slot button-->
+                                <a class="btn btn-default add-new-slot pull-left" href="javascript:;" onclick="jQuery( '#modal-1').modal( 'show'); ">
 								Add New TA Slots
 							</a>
                             </div>
@@ -550,7 +730,7 @@
 
             <!-- by people -->
             <!-- test -->
-            <div id="instructors-table">
+            <div id="people-view">
                 <div class="container-fluid border-bottom--gray">
                     <div class="flex-row">
                         <!-- TA INFO -->
@@ -584,81 +764,21 @@
                             </div>
                         </div>
                         <!-- TA INFO ENDS -->
-                        <div class="flex-selector flex-selector_style">
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
+                        <div class="flex-selector-people_view flex-selector_style">
+                            <div class="course-people">
+                                <div class="alert alert-info assignment assignment-section">
                                     <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <div class="assignment-info-section">
+                                        <p class="assignment-title">PSC 113 - Session 001</p>
+                                        <div class="assignment-details">
+                                            <p class="assignment-detail-info">Seats: 75 Unit: 3</p>
+                                            <p class="assignment-detail-info">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                    <!-- drop down end-->
-                                </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <!-- drop down ends-->
                                 <!--add new slot button-->
-                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default tile-assignment ta tile-assignment_add-course pull-left">
+                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default assignment ta assignment_add-course pull-left">
                                     <p>Add Courses</p>
                                 </a>
                             </div>
@@ -698,191 +818,21 @@
                             </div>
                         </div>
                         <!-- TA INFO ends-->
-                        <div class="flex-selector flex-selector_style">
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
+                        <div class="flex-selector-people_view flex-selector_style">
+                            <div class="course-people">
+                                <div class="alert alert-info assignment assignment-section">
                                     <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <div class="assignment-info-section">
+                                        <p class="assignment-title">PSC 113 - Session 001</p>
+                                        <div class="assignment-details">
+                                            <p class="assignment-detail-info">Seats: 75 Unit: 3</p>
+                                            <p class="assignment-detail-info">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <!-- drop down ends-->
                                 <!--add new slot button-->
-                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default tile-assignment ta tile-assignment_add-course pull-left">
-                                    <p>Add Courses</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid border-bottom--gray">
-                    <div class="flex-row">
-                        <!-- TA INFO -->
-                        <div class="flex-row-children">
-                            <h4>Brown, Suzi</h4>
-                            <div class="label ng-binding ng-scope info--bg_black">
-                                Master
-                            </div>
-                            <div>
-                                <ul class="ta-info">
-                                    <li>
-                                        <strong>Teaching Experience:</strong>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            - Psychology TA (Winter 2014 to Spring 2016)
-                                        </p>
-                                        <p>
-                                            - Research assistant (Spring 2015 to winter 2016)
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <strong>Comments:</strong>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Finished Bachelor of Psychology, 2006, UCLA, Master of Applied Psychology, 2011, Washington Univeristy, and Currently studying and researching Cognitive Psychology in UC Davis’s PhD program.
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- TA INFO ENDS -->
-                        <div class="flex-selector flex-selector_style">
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <!-- drop down ends-->
-                                <!--add new slot button-->
-                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default tile-assignment ta tile-assignment_add-course pull-left">
+                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default assignment ta assignment_add-course pull-left">
                                     <p>Add Courses</p>
                                 </a>
                             </div>
@@ -923,80 +873,32 @@
                         </div>
                         <!-- TA INFO ENDS -->
 
-                        <div class="flex-selector flex-selector_style">
-                            <div class="flex-ta-slector-children">
-                                <div class="alert alert-info tile-assignment">
+                        <div class="flex-selector-people_view flex-selector_style">
+                            <div class="course-people">
+                                <div class="alert alert-info assignment assignment-section">
                                     <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <div class="assignment-info-section">
+                                        <p class="assignment-title">PSC 113 - Session 001</p>
+                                        <div class="assignment-details">
+                                            <p class="assignment-detail-info">Seats: 75 Unit: 3</p>
+                                            <p class="assignment-detail-info">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
+                                <div class="alert alert-info assignment assignment-section">
                                     <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                    <div class="assignment-info-section">
+                                        <p class="assignment-title">PSC 113 - Session 001</p>
+                                        <div class="assignment-details">
+                                            <p class="assignment-detail-info">Seats: 75 Unit: 3</p>
+                                            <p class="assignment-detail-info">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="alert alert-info tile-assignment">
-                                    <i tabindex="0" class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Focus on Pychological study based on human interaction and behaviors" data-original-title="PSC 113"></i>
-                                    <p>PSC 113 - A Series</p>
-                                    <div class="tile-assignment-details">
-                                        <small>Seats: 75</small>
-                                        <small>Units: 3</small>
-                                        <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary"></i>
-                                    </div>
-                                </div>
-                                <!-- drop down -->
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <div class="ta-reader-selector">
-                                    <select name="test" class="selectboxit" data-first-option="false">
-										<option>Assign Course</option>
-										<optgroup label="Course">
-											<option value="1">PSY 120</option>
-											<option value="2">PSY 090</option>
-											<option value="3">PSY 015A</option>
-											<option value="4">PSY 010</option>
-										</optgroup>
-										<optgroup label="Prefered Course">
-											<option value="1">PSY 001</option>
-											<option value="2">PSY 050</option>
-											<option value="3">PSY 20B</option>
-										</optgroup>
-									</select>
-                                </div>
-                                <!-- drop down ends-->
                                 <!--add new slot button-->
-                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default tile-assignment ta tile-assignment_add-course pull-left">
+                                <a href="javascript:;" onclick="jQuery('#modal-2').modal('show');" class="btn btn-default assignment ta assignment_add-course pull-left">
                                     <p>Add Courses</p>
                                 </a>
                             </div>

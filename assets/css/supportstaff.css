@@ -1,30 +1,14 @@
 .border-bottom--gray {
     border-bottom: 2px solid rgb(235, 235, 235);
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 
-.tile-assignment {
-    text-align: center;
+.assignment {
+    text-align: left;
     width: 40%;
     height: 30px;
     padding: 6px;
     margin-bottom: 17px;
-    margin-right: 10%;
-}
-
-.view-swticher {
-    flex: 1 1 auto;
-}
-
-.course-people-swticher {
-    display: flex;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-#align-end {
-    align-self: flex-end;
-    flex: 0 1 auto;
 }
 
 .info--bg_black {
@@ -51,21 +35,30 @@
     color: red;
 }
 
-.ta-reader-selector {
-    width: 40%;
+.people-selector {
+    width: 65%;
     margin-bottom: 17px;
-    margin-right: 10%;
-    float: right;
+    align-self: center;
 }
 
 .add-new-slot {
-    width: 40%;
-    margin-right: 10%;
+    width: 65%;
     margin-bottom: 20px;
     position: relative;
     height: 30px;
     padding: 6px;
     border: 1px solid #ebebeb;
+    align-self: center;
+}
+
+.preference-title {
+    padding: 5px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    border-radius: 2px;
+    border: 1px solid #ebebeb;
+    color: #303641;
+    cursor: default;
 }
 
 .ta-info {
@@ -80,26 +73,79 @@
     padding-bottom: 10px;
 }
 
-
-/* bootstrap overwrite */
-
-.table-bordered--white {
-    border: solid white !important;
+.assignment_add-course {
+    height: 30px !important;
+    padding: 6px !important;
+    line-height: 17.15px !important;
 }
 
-#instructors-table .tile-assignment {
+.assignment:hover .icon-remove_person {
+    display: block !important;
+}
+
+.assignment--poniter {
+    cursor: pointer;
+}
+
+.assignment-title {
+    margin-bottom: 2px !important;
+}
+
+.assignment-section {
     position: relative;
-    height: 45px;
+    height: 60px;
+}
+
+.assignment-details {
+    padding-top: 3px;
+    font-size: 10px;
+    color: rgba(44, 126, 161, 0.7);
+}
+
+.assignment-detail-info {
+    margin-bottom: 2px;
+    font-size: 8pt;
+}
+
+.assignment-info-section {
+    margin-left: 45px;
+}
+
+.assignment-selector {
+    width: 40%;
+    margin-bottom: 17px;
+}
+
+#courses-view .assignment-remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #000;
+}
+
+#people-view .assignment-remove {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    color: #000;
+}
+
+#people-view .assignment {
+    position: relative;
+    height: 60px;
     line-height: .9em;
     padding: 10px 6px;
     float: right;
     margin-right: 10%;
 }
 
-#courses-table .tile-assignment {
-    width: 40%;
-    float: right;
-    margin-right: 10%;
+#courses-view .assignment {
+    width: 65%;
+    align-self: center;
+    text-align: center;
+    position: relative;
+    height: 30px;
+    padding: 6px;
 }
 
 .page-body .select2-container {
@@ -110,63 +156,6 @@
 .ta-slot--width {
     width: 450px;
 }
-
-
-/*bootstrap overwrite*/
-
-.row {
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-.btn-default p {
-    text-align: center;
-}
-
-td {
-    border: 1px solid white !important;
-    border-bottom: 2px solid rgb(235, 235, 235) !important;
-}
-
-.popover-content {
-    color: gray;
-}
-
-.panel-options-drop_down {
-    width: 60px;
-    text-align: center;
-    background: none !important;
-    padding: 5px;
-}
-
-.panel-heading .panel-options {
-    padding: 5px 0px 5px 0px;
-}
-
-.panel-primary>.panel-heading>.panel-options>a {
-    padding: 0px;
-    margin: 0px;
-}
-
-
-/* some overwrite */
-
-.form-groups-bordered>.form-group {
-    border-bottom: none;
-}
-
-.selectboxit .selectboxit-option-icon-container {
-    margin-left: 34% !important;
-}
-
-.tile-assignment_add-course {
-    height: 30px !important;
-    padding: 6px !important;
-    line-height: 17.15px !important;
-}
-
-
-/* misc */
 
 .icon-remove_person {
     /* remove person icon */
@@ -197,13 +186,25 @@ td {
     cursor: pointer;
 }
 
-.tile-assignment:hover .icon-remove_person {
-    display: block !important;
+.support-staff-header {
+    text-align: center;
+    padding-bottom: 5px;
 }
 
-.tile-assignment--poniter {
-    cursor: pointer;
+.course-requriement {
+    color: #2c7ea1;
+    right: 80%;
+    top: -1px;
+    position: absolute;
 }
+
+.course-requriement:hover,
+.course-requriement:focus {
+    color: #1b4e64;
+}
+
+
+/* flex components */
 
 .search-flex {
     margin-bottom: 50px;
@@ -228,7 +229,14 @@ td {
     margin-top: 20px;
 }
 
-.flex-selector {
+.flex-selector-course_view {
+    margin-top: 10px;
+    display: flex;
+    flex: 1 1 20%;
+    flex-direction: column;
+}
+
+.flex-selector-people_view {
     display: flex;
     flex: 1 1 40%;
     flex-direction: column;
@@ -244,18 +252,79 @@ td {
     flex-flow: row wrap;
 }
 
-.page-header {
-    border: none;
+.view-switcher {
+    flex: 1 1 auto;
 }
 
-.course-requriement {
-    color: #2c7ea1;
-    right: 172px;
-    top: 0px;
-    position: absolute;
+.review-switcher {
+    display: flex;
+    justify-content: end;
+    flex: 1 1 auto;
 }
 
-.course-requriement:hover,
-.course-requriement:focus {
-    color: #1b4e64;
+.course-people {
+    flex-direction: column;
+    display: flex;
+}
+
+.course-people-swticher {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    align-self: center;
+}
+
+
+/*bootstrap overwrite*/
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.btn-default p {
+    text-align: center;
+}
+
+td {
+    border: 1px solid white !important;
+    border-bottom: 2px solid rgb(235, 235, 235) !important;
+}
+
+.table-bordered--white {
+    border: solid white !important;
+}
+
+.popover-content {
+    color: gray;
+}
+
+.panel-options-drop_down {
+    width: 60px;
+    text-align: center;
+    background: none !important;
+    padding: 5px;
+}
+
+.panel-heading .panel-options {
+    padding: 5px 0px 5px 0px;
+}
+
+.panel-primary>.panel-heading>.panel-options>a {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* bootstrap overwrite ends */
+
+
+/* some neon overwrite */
+
+.form-groups-bordered>.form-group {
+    border-bottom: none;
+}
+
+.selectboxit .selectboxit-option-icon-container {
+    margin-left: 25% !important;
 }

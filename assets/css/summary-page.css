@@ -1,0 +1,156 @@
+body {
+    color: #373e4a;
+}
+
+.summary-panel-heading {
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-table-style {
+    margin-top: 25px;
+}
+
+.summary-table-subheader {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.summary-panel-title {
+    padding: 10px 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: inherit;
+    flex: 0 1 auto;
+    align-self: center;
+}
+
+.summary-panel-title>* {
+    margin: 0;
+}
+
+.summary-preference-indicator {
+    padding: 10px 15px;
+    flex: 0 1 auto;
+}
+
+.summary-panel-body {
+    position: relative;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+.summary-panel {
+    margin-top: 15px;
+    margin-bottom: 17px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.summary-panel-courses {
+    border-color: #ebebeb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    width: 80%;
+}
+
+.summary-panel-notices {
+    border-color: #ebebeb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    width: 15%;
+    height: 200px;
+    position: fixed;
+    top: 1.5em;
+    right: 2.5em;
+}
+
+.summary-panel-courses>.summary-panel-heading {
+    color: #373e4a;
+    background-color: #ffffff;
+    border-color: #ebebeb;
+    padding: 0;
+}
+
+.check-mark-icon {
+    font-size: 8pt;
+    margin-right: 7px;
+}
+
+.table-border-none>tbody>tr>td {
+    line-height: 3;
+}
+
+
+/* remove border*/
+
+.table-border-none>tbody>tr>td,
+.table-border-none>tbody+tbody,
+.table-border-none>thead>tr>th {
+    border: none !important;
+}
+
+
+/* future-year view style */
+
+.future-year {
+    color: #d1d1d1;
+}
+
+.future-year h4 {
+    color: #d1d1d1;
+}
+
+.future-year th {
+    color: #d1d1d1;
+}
+
+
+/*preference indicator*/
+
+.active-indicator-btn {
+    background-color: white;
+    border: 2px solid #00A651;
+    color: #00A651;
+    line-height: 25px;
+}
+
+.active-indicator-btn:hover {
+    background-color: #05BF60;
+    border-color: #00A651;
+    color: white !important;
+}
+
+.nonactive-indicator-btn {
+    background-color: white;
+    border: 2px solid #FA4848;
+    color: #FA4848;
+    line-height: 25px;
+}
+
+.nonactive-indicator-btn:hover {
+    background-color: #FF6767;
+    border-color: #FA4848;
+    color: white !important;
+}
+
+.badge-term-indicator {
+    position: absolute;
+    top: 14px;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #00A651;
+}
