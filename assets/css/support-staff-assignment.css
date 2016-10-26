@@ -148,11 +148,6 @@
     padding: 6px;
 }
 
-.page-body .select2-container {
-    width: 40%;
-    float: left;
-}
-
 .ta-slot--width {
     width: 450px;
 }
@@ -262,12 +257,12 @@
     flex: 1 1 auto;
 }
 
-.course-people {
+.ta_course-section {
     flex-direction: column;
     display: flex;
 }
 
-.course-people-swticher {
+.ta_course-section-swticher {
     display: flex;
     margin-top: 15px;
     margin-bottom: 40px;
@@ -327,4 +322,9 @@ td {
 
 .selectboxit .selectboxit-option-icon-container {
     margin-left: 25% !important;
+}
+
+.page-body .select2-container {
+    width: 40%;
+    float: left;
 }

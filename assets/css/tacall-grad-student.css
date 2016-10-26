@@ -26,6 +26,27 @@
     color: #373e4a;
 }
 
+.empty-flex-box {
+    flex: 0 1 20%;
+}
+
+
+/* Comments btn */
+
+.comments-btn {
+    flex: 0 1 auto;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.comments-btn i {
+    font-size: 15pt;
+}
+
+.comments-btn span {
+    vertical-align: super;
+}
+
 
 /*need organized */
 
@@ -78,18 +99,15 @@
     margin-bottom: 0px !important;
 }
 
-.course-people {
+.ta-course {
     flex-direction: column;
     display: flex;
     position: relative;
 }
 
-.flex-selector_style {
-    margin-top: 70px;
-}
-
-.flex-selector-people_view {
+.ta-course-container {
     display: flex;
     flex: 1 1 40%;
     flex-direction: column;
+    margin-top: 70px;
 }
