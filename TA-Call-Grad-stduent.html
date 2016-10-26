@@ -156,205 +156,195 @@
 
         <div class="main-content">
             <div class="container-fluid">
+                <!-- page header -->
                 <div class="tacall-grad-student-header">
-                    <h3>Support Staff Assignments</h3>
-                    <p>Psychology Fall 2017</p>
+                    <h3>TA Call: 2016 Fall </h3>
                 </div>
+                <!-- page header ends -->
             </div>
 
             <div class="row">
-                <div id="courses-view">
+                <div class="container-fluid border-bottom--gray">
+                    <div class="flex-row">
+                        <!-- TA Requirements -->
+                        <div class="ta-requirement">
+                            <h4>TA Eligibility Requirements</h4>
+                            <div style="margin-top: 34px;">
+                                <p>
+                                    Full-time (12 unites) registered graduate student, current cumulative GPA is 3.00 or higher, total appointments for this quarter does not exceed 75%,
+                                </p>
+                            </div>
+                            <div class="checkbox religibility-checkbox">
+                                <label class="checkbox-inline"><input value="" type="checkbox">Require Eligibility Confirmation ?</label>
+                            </div>
+                        </div>
+                        <!-- TA Requirements Ends -->
 
-                    <!-- modal-1 -->
-                    <div class="modal fade" id="modal-1">
-                        <div class="modal-dialog ta-slot--width">
-                            <div class="modal-content">
-                                <div class="modal-header teaching-call--header_style">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title">New TA Slot</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <form role="form" class="form-horizontal form-groups-bordered">
-                                            <div class="form-group">
-                                                <label class="col-sm-6 control-label">% of Appointment Time:</label>
-                                                <div class="col-sm-5">
-                                                    <input class="form-control form-control--appointment-time" type="text" placeholder="%">
-                                                </div>
+                        <div class="empty-flex-box_ta-course">
+                        </div>
+
+                        <div class="ta-course-container">
+                            <div class="ta-course-section">
+                                <div class="alert alert-info ta-course">
+                                    <i class="glyphicon glyphicon-menu-hamburger move-icon"></i>
+                                    <i tabindex="0 " class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary " data-toggle="popover " data-trigger="focus " data-placement="left " data-content="Focus on Pychological study
+                                             based on human interaction and behaviors " data-original-title="PSC 113 "></i>
+                                    <div class="ta-course-info">
+                                        <p class="ta-course_title">PSC 113 - Session 001</p>
+                                        <div class="ta-course_details">
+                                            <div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-6 control-label">Number of Positions:</label>
-                                                <div class="col-sm-5">
-                                                    <div class="input-spinner">
-                                                        <button type="button" class="btn btn-default">-</button>
-                                                        <input type="text" class="form-control size-1" value="1">
-                                                        <button type="button" class="btn btn-default">+</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                            <p class="ta-preference">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove ta-course-remove text-primary"></i>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="modal-footer modal-footer--teaching-call">
-                                    <button type="button" class="btn btn-info">Create</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- modal-2 -->
-                <div class="modal fade" id="modal-2">
-                    <div class="modal-dialog ta-slot--width">
-                        <div class="modal-content">
-                            <div class="modal-header teaching-call--header_style">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">New Course Slot</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <form role="form" class="form-horizontal form-groups-bordered">
-                                        <div class="form-group">
-                                            <label class="col-sm-5 control-label">Add a Course:</label>
-                                            <div class="col-sm-6">
-                                                <input class="form-control form-control--add-course" type="text" placeholder="Enter Course Name">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="modal-footer modal-footer--teaching-call">
-                                <button type="button" class="btn btn-info">Create</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- modal-ends -->
-                <!-- by course end -->
-
-                <!-- by people -->
-                <!-- test -->
-                <div id="people-view">
-                    <div class="container-fluid border-bottom--gray">
-                        <div class="flex-row">
-                            <!-- TA Requirements -->
-                            <div class="ta-requirement">
-                                <h4>TA Eligibility Requirements</h4>
-                                <div style="margin-top: 34px;">
-                                    <p>
-                                        Full-time (12 unites) registered graduate student, current cumulative GPA is 3.00 or higher, total appointments for this quarter does not exceed 75%,
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- TA Requirements Ends -->
-
-                            <div class="empty-flex-box">
-                            </div>
-
-                            <div class="ta-course-container">
-                                    <div style="display: flex;margin-bottom: 17px;">
-                                        <div class="alert alert-info assignment assignment-section " style="flex: 0 1 auto;">
-                                            <i class="glyphicon glyphicon-menu-hamburger move-icon"></i>
-                                            <i tabindex="0 " class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary " data-toggle="popover " data-trigger="focus " data-placement="left " data-content="Focus on Pychological study
-                                             based on human interaction and behaviors " data-original-title="PSC 113 "></i>
-                                            <div class="assignment-info-section ">
-                                                <p class="assignment-title ">PSC 113 - Session 001</p>
-                                                <div class="assignment-details ">
-                                                    <div>
-                                                    </div>
-                                                    <p class="assignment-detail-info ">Course TA</p>
-                                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comments-btn">
-                                            <a href="#"><i class="glyphicon glyphicon-edit"></i>
+                                <div class="comments-btn">
+                                    <a href="#"><i class="glyphicon glyphicon-edit"></i>
                                             <span>Comments...</span>
                                             </a>
+                                </div>
+                            </div>
+                            <div class="ta-course-section">
+                                <div class="alert alert-info ta-course">
+                                    <i class="glyphicon glyphicon-menu-hamburger move-icon"></i>
+                                    <i tabindex="0 " class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary " data-toggle="popover " data-trigger="focus " data-placement="left " data-content="Focus on Pychological study
+                                             based on human interaction and behaviors " data-original-title="PSC 113 "></i>
+                                    <div class="ta-course-info">
+                                        <p class="ta-course_title">PSC 113 - Session 001</p>
+                                        <div class="ta-course_details">
+                                            <div>
+                                            </div>
+                                            <p class="ta-preference">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove ta-course-remove text-primary"></i>
                                         </div>
                                     </div>
-                                    <div style="display: flex;margin-bottom: 17px;">
-                                        <div class="alert alert-info assignment assignment-section " style="flex: 0 1 auto;">
-                                            <i class="glyphicon glyphicon-menu-hamburger move-icon"></i>
-                                            <i tabindex="0 " class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary " data-toggle="popover " data-trigger="focus " data-placement="left " data-content="Focus on Pychological study
-                                             based on human interaction and behaviors " data-original-title="PSC 113 "></i>
-                                            <div class="assignment-info-section ">
-                                                <p class="assignment-title ">PSC 113 - Session 001</p>
-                                                <div class="assignment-details ">
-                                                    <div>
-                                                    </div>
-                                                    <p class="assignment-detail-info ">Course TA</p>
-                                                    <i class=" btn glyphicon glyphicon-remove assignment-remove text-primary "></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comments-btn">
-                                            <a href="#"><i class="glyphicon glyphicon-edit"></i>
+                                </div>
+                                <div class="comments-btn">
+                                    <a href="#"><i class="glyphicon glyphicon-edit"></i>
                                             <span>Comments...</span>
                                             </a>
+                                </div>
+                            </div>
+                            <div class="ta-course-section">
+                                <div class="alert alert-info ta-course">
+                                    <i class="glyphicon glyphicon-menu-hamburger move-icon"></i>
+                                    <i tabindex="0 " class="btn glyphicon glyphicon-exclamation-sign course-requriement text-primary " data-toggle="popover " data-trigger="focus " data-placement="left " data-content="Focus on Pychological study
+                                             based on human interaction and behaviors " data-original-title="PSC 113 "></i>
+                                    <div class="ta-course-info">
+                                        <p class="ta-course_title">PSC 113 - Session 001</p>
+                                        <div class="ta-course_details">
+                                            <div>
+                                            </div>
+                                            <p class="ta-preference">Course TA</p>
+                                            <i class=" btn glyphicon glyphicon-remove ta-course-remove text-primary"></i>
                                         </div>
                                     </div>
-                                    <!--add new slot button-->
-                                    <a href="javascript:; " onclick="jQuery( '#modal-2').modal( 'show'); " class="btn btn-default assignment ta assignment_add-course">
-                                        <p class="text-center">Add Courses</p>
-                                    </a>
+                                </div>
+                                <div class="comments-btn">
+                                    <a href="#"><i class="glyphicon glyphicon-edit"></i>
+                                            <span>Comments...</span>
+                                            </a>
+                                </div>
                             </div>
-
+                            <!-- drop down -->
+                            <div class="course-preference-selector">
+                                <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Select Preference</option>
+										<optgroup label="Faculty Preference">
+											<option value="1 ">Psychology 001</option>
+											<option value="2 ">Psychology 050</option>
+											<option value="3 ">Pychological 101</option>
+										</optgroup>
+										<optgroup label="Course(s)">
+											<option value="1 ">Psychology 015</option>
+											<option value="2 ">Psychology 020</option>
+                                            <option value="3 ">Psychology 115</option>
+											<option value="4 ">Psychology 120</option>
+										</optgroup>
+									</select>
+                            </div>
+                            <!-- drop down ends-->
+                            <!--add new slot button
+                                <a href="javascript:; " onclick="jQuery( '#modal-2').modal( 'show'); " class="btn btn-default assignment ta ta-course_add">
+                                    <p class="text-center">Add Courses</p>
+                                </a>
+                            -->
                         </div>
+
                     </div>
-                    <!-- test end-->
                 </div>
             </div>
+        </div>
+        <!-- input box section -->
+        <div class="main-content input-box-container">
+            <div class="container-fluid">
+                <div class="input-box-section">
+                    <div class="input-box-area">
+                        <h5 class="pull-left">Teaching Qualification</h5>
+                        <textarea class="form-control" placeholder="Please indicate you teaching qualification here" rows="5" id="comment">
+                            </textarea>
+                    </div>
+                    <div class="empty-flex-box_input-box">
+                    </div>
+                    <div class="input-box-area">
+                        <h5 class="pull-left">Comments</h5>
+                        <textarea class="form-control" placeholder="Please add any comments here" rows="5" id="comment">
+                            </textarea>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-info pull-right">Next</button>
+            </div>
+        </div>
+        <!-- input box section ends -->
 
-            <!-- Imported styles on this page -->
-            <link rel="stylesheet " href="assets/js/select2/select2-bootstrap.css ">
-            <link rel="stylesheet " href="assets/js/select2/select2.css ">
-            <link rel="stylesheet " href="assets/js/selectboxit/jquery.selectBoxIt.css ">
-            <link rel="stylesheet " href="assets/js/daterangepicker/daterangepicker-bs3.css ">
-            <link rel="stylesheet " href="assets/js/icheck/skins/minimal/_all.css ">
-            <link rel="stylesheet " href="assets/js/icheck/skins/square/_all.css ">
-            <link rel="stylesheet " href="assets/js/icheck/skins/flat/_all.css ">
-            <link rel="stylesheet " href="assets/js/icheck/skins/futurico/futurico.css ">
-            <link rel="stylesheet " href="assets/js/icheck/skins/polaris/polaris.css ">
+        <!-- Imported styles on this page -->
+        <link rel="stylesheet " href="assets/js/select2/select2-bootstrap.css ">
+        <link rel="stylesheet " href="assets/js/select2/select2.css ">
+        <link rel="stylesheet " href="assets/js/selectboxit/jquery.selectBoxIt.css ">
+        <link rel="stylesheet " href="assets/js/daterangepicker/daterangepicker-bs3.css ">
+        <link rel="stylesheet " href="assets/js/icheck/skins/minimal/_all.css ">
+        <link rel="stylesheet " href="assets/js/icheck/skins/square/_all.css ">
+        <link rel="stylesheet " href="assets/js/icheck/skins/flat/_all.css ">
+        <link rel="stylesheet " href="assets/js/icheck/skins/futurico/futurico.css ">
+        <link rel="stylesheet " href="assets/js/icheck/skins/polaris/polaris.css ">
 
-            <!-- Bottom scripts (common) -->
-            <script src="assets/js/gsap/TweenMax.min.js "></script>
-            <script src="assets/js/bootstrap.js "></script>
-            <script src="assets/js/resizeable.js "></script>
-            <script src="assets/js/select2/select2.min.js "></script>
-            <!-- Multiselect library -->
-            <script src="assets/js/neon-api.js "></script>
-            <!-- Bottom scripts (common) extra-->
-            <script src="assets/js/gsap/TweenMax.min.js "></script>
-            <script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js "></script>
-            <script src="assets/js/bootstrap.js "></script>
-            <script src="assets/js/joinable.js "></script>
-            <script src="assets/js/resizeable.js "></script>
-            <script src="assets/js/neon-api.js "></script>
-
-
-
-
-            <!-- JavaScripts initializations and stuff -->
-            <script src="assets/js/neon-custom.js "></script>
+        <!-- Bottom scripts (common) -->
+        <script src="assets/js/gsap/TweenMax.min.js "></script>
+        <script src="assets/js/bootstrap.js "></script>
+        <script src="assets/js/resizeable.js "></script>
+        <script src="assets/js/select2/select2.min.js "></script>
+        <!-- Multiselect library -->
+        <script src="assets/js/neon-api.js "></script>
+        <!-- Bottom scripts (common) extra-->
+        <script src="assets/js/gsap/TweenMax.min.js "></script>
+        <script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js "></script>
+        <script src="assets/js/bootstrap.js "></script>
+        <script src="assets/js/joinable.js "></script>
+        <script src="assets/js/resizeable.js "></script>
+        <script src="assets/js/neon-api.js "></script>
 
 
 
-            <!-- Imported scripts on this page -->
-            <script src="assets/js/select2/select2.min.js "></script>
-            <script src="assets/js/bootstrap-tagsinput.min.js "></script>
-            <script src="assets/js/typeahead.min.js "></script>
-            <script src="assets/js/selectboxit/jquery.selectBoxIt.min.js "></script>
-            <script src="assets/js/bootstrap-datepicker.js "></script>
-            <script src="assets/js/bootstrap-timepicker.min.js "></script>
-            <script src="assets/js/bootstrap-colorpicker.min.js "></script>
-            <script src="assets/js/moment.min.js "></script>
-            <script src="assets/js/daterangepicker/daterangepicker.js "></script>
-            <script src="assets/js/jquery.multi-select.js "></script>
-            <script src="assets/js/icheck/icheck.min.js "></script>
-            <script src="assets/js/neon-chat.js "></script>
+
+        <!-- JavaScripts initializations and stuff -->
+        <script src="assets/js/neon-custom.js "></script>
+
+
+
+        <!-- Imported scripts on this page -->
+        <script src="assets/js/select2/select2.min.js "></script>
+        <script src="assets/js/bootstrap-tagsinput.min.js "></script>
+        <script src="assets/js/typeahead.min.js "></script>
+        <script src="assets/js/selectboxit/jquery.selectBoxIt.min.js "></script>
+        <script src="assets/js/bootstrap-datepicker.js "></script>
+        <script src="assets/js/bootstrap-timepicker.min.js "></script>
+        <script src="assets/js/bootstrap-colorpicker.min.js "></script>
+        <script src="assets/js/moment.min.js "></script>
+        <script src="assets/js/daterangepicker/daterangepicker.js "></script>
+        <script src="assets/js/jquery.multi-select.js "></script>
+        <script src="assets/js/icheck/icheck.min.js "></script>
+        <script src="assets/js/neon-chat.js "></script>
 
 </body>
 

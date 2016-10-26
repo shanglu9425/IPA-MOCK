@@ -26,7 +26,7 @@
     color: #373e4a;
 }
 
-.empty-flex-box {
+.empty-flex-box_ta-course {
     flex: 0 1 20%;
 }
 
@@ -50,25 +50,6 @@
 
 /*need organized */
 
-.assignment-info-section {
-    margin-left: 55px;
-}
-
-.assignment-title {
-    margin-bottom: 2px !important;
-}
-
-.assignment-details {
-    padding-top: 3px;
-    font-size: 10px;
-    color: rgba(44, 126, 161, 0.7);
-}
-
-.assignment-detail-info {
-    margin-bottom: 2px;
-    font-size: 8pt;
-}
-
 .course-requriement {
     color: #2c7ea1;
     right: 75%;
@@ -76,10 +57,11 @@
     position: absolute;
 }
 
-.assignment_add-course {
+.ta-course_add {
     height: 30px !important;
     padding: 6px !important;
     line-height: 17.15px !important;
+    width: 45%;
 }
 
 #people-view .assignment-remove {
@@ -89,7 +71,19 @@
     color: #000;
 }
 
-.assignment {
+.ta-course-container {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.ta-course-section {
+    display: flex;
+    margin-bottom: 17px;
+}
+
+.ta-course {
     text-align: left;
     position: relative;
     width: 45%;
@@ -97,17 +91,74 @@
     padding: 10px 6px;
     line-height: .9em;
     margin-bottom: 0px !important;
+    flex: 0 1 auto;
 }
 
-.ta-course {
-    flex-direction: column;
-    display: flex;
-    position: relative;
+.ta-course-remove {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #000;
 }
 
-.ta-course-container {
+.ta-course-info {
+    margin-left: 55px;
+}
+
+.ta-course_title {
+    margin-bottom: 2px !important;
+}
+
+.ta-course_details {
+    padding-top: 3px;
+    font-size: 10px;
+    color: rgba(44, 126, 161, 0.7);
+}
+
+.ta-preference {
+    margin-bottom: 2px;
+    font-size: 8pt;
+}
+
+.religibility-checkbox {
+    margin-top: 15px;
+}
+
+.religibility-checkbox label {
+    font-size: 8.5pt;
+    color: black;
+}
+
+.course-preference-selector {
+    width: 45%;
+}
+
+.course-preference-selector .selectboxit .selectboxit-option-icon-container {
+    margin-left: 23%;
+}
+
+.input-box-container {
+    margin-top: 60px;
+    background-color: #F8F8F8 !important;
+    border-top: 1px solid #EBEBEB;
+}
+
+.input-box-section {
     display: flex;
-    flex: 1 1 40%;
-    flex-direction: column;
-    margin-top: 70px;
+}
+
+.input-box-area {
+    flex: 0 1 47.5%;
+    margin-bottom: 35px;
+}
+
+.empty-flex-box_input-box {
+    flex: 0 1 5%;
+}
+
+
+/* overwrite */
+
+.main-content {
+    display: block !important;
 }
