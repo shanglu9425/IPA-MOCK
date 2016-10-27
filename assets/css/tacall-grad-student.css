@@ -24,31 +24,12 @@
     top: 15px;
     font-size: 15pt;
     color: #373e4a;
+    cursor: pointer;
 }
 
 .empty-flex-box_ta-course {
     flex: 0 1 20%;
 }
-
-
-/* Comments btn */
-
-.comments-btn {
-    flex: 0 1 auto;
-    align-self: center;
-    margin-left: 10px;
-}
-
-.comments-btn i {
-    font-size: 15pt;
-}
-
-.comments-btn span {
-    vertical-align: super;
-}
-
-
-/*need organized */
 
 .course-requriement {
     color: #2c7ea1;
@@ -75,7 +56,7 @@
     display: flex;
     flex: 1 1 40%;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 11px;
 }
 
 .ta-course-section {
@@ -156,9 +137,76 @@
     flex: 0 1 5%;
 }
 
+.due-day-header {
+    margin-bottom: 34px;
+}
+
 
 /* overwrite */
 
 .main-content {
     display: block !important;
+}
+
+textarea.form-control {
+    height: 180px;
+}
+
+.popover-content {
+    color: gray;
+}
+
+.panel-options-drop_down {
+    width: 60px;
+    text-align: center;
+    background: none !important;
+    padding: 5px;
+}
+
+.panel-heading .panel-options {
+    padding: 5px 0px 5px 0px;
+}
+
+.panel-primary>.panel-heading>.panel-options>a {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* Comments btn */
+
+.comments-btn {
+    flex: 0 1 auto;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.comments-btn i {
+    font-size: 12pt;
+    color: #95989A;
+}
+
+.comments-btn span {
+    color: #95989A;
+}
+
+
+/* Comments btn ends*/
+
+
+/* input comments modal */
+
+.comments-modal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.comments-modal-title {
+    flex: 0 1 100%;
+}
+
+.comments-modal-content {
+    flex: 0 1 50px;
+    justify-content: center;
 }

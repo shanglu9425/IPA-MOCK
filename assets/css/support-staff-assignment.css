@@ -130,16 +130,7 @@
     color: #000;
 }
 
-#people-view .assignment {
-    position: relative;
-    height: 60px;
-    line-height: .9em;
-    padding: 10px 6px;
-    float: right;
-    margin-right: 10%;
-}
-
-#courses-view .assignment {
+.assignment {
     width: 65%;
     align-self: center;
     text-align: center;
