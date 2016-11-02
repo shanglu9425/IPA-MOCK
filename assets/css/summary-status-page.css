@@ -14,7 +14,7 @@
 }
 
 .table {
-    margin-top: 30px
+    margin-top: 60px;
 }
 
 .table-content {
@@ -45,11 +45,25 @@
     text-align: center;
     border-radius: 3px;
     border: 1px solid lightgray;
-    padding: 8px 0px 8px 0px;
+    padding: 15px 0px 15px 0px;
     text-align: center;
     margin-top: 20px;
 }
 
 .container-box-title {
     text-align: center;
+}
+
+.survey-container {
+    width: 520px;
+    padding: 8px 0px 8px 0px;
+}
+
+.survey-number {
+    color: #4686A5;
+}
+
+.people-info-icon {
+    color: #4686A5;
+    padding: 0px 0px 0px 10px !important;
 }
