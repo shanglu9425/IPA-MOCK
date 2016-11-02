@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Neon Admin Panel" />
+    <meta name="author" content="" />
+
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <title>Instructional Planning and Administration - Assignments</title>
+
+    <link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/neon-core.css">
+    <link rel="stylesheet" href="assets/css/neon-theme.css">
+    <link rel="stylesheet" href="assets/css/neon-forms.css">
+    <link rel="stylesheet" href="assets/css/assignments.css">
+    <link rel="stylesheet" href="assets/css/ta-call-config.css">
+    <link rel="stylesheet" href="assets/css/supportstaff.css">
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+
+<body class="page-body">
+    <div class="main-content">
+        <!-- modal -->
+        <div style="display: block; background-color: black;" id="modal-1" class="modal">
+            <div class="modal-dialog teaching-call--width">
+                <div class="modal-content">
+                    <div class="modal-header teaching-call--header_style">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">TA Call Configuration</h4>
+                    </div>
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <!-- collect preference -->
+                        <div class="container-fluid" style="display:flex; padding: 0px;">
+                            <div class="container-fluid" style="flex: 1 1 auto; padding: 0px;">
+                                <div class="row btn-group btn-group--position container-fluid" data-toggle="buttons" style="margin-bottom: 25px;">
+                                    <h5 style="margin-bottom: 15px;">Collect Preference on </h5>
+                                    <label class="btn btn-white btn-sm active" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span>TA
+						</label>
+                                    <label class="btn btn-white btn-sm" id="instructors-pivot">
+								<input type="radio" name="options">
+								<span></span>Reader
+							</label>
+                                    <label class="btn btn-white btn-sm" id="instructors-pivot">
+								<input type="radio" name="options">
+								<span></span>AI
+							</label>
+                                </div>
+                                <!-- collect preference ends-->
+                                <div class="row flex-box container-fluid">
+                                    <!-- required info-->
+                                    <div class="">
+                                        <h5 style="margin-bottom: 15px;">Required Information</h5>
+                                        <div class="checkbox">
+                                            <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Require Eligibility Confirmation ?</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Collect Preference Qualifications ?</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Collect Preference Comments ?</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Collect General Comments ?</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Allow submission after due date ?</label>
+                                        </div>
+                                    </div>
+                                    <!-- required info ends-->
+                                    <!-- empty flex-box -->
+                                    <div class="empty_flex_box-teaching-call container-fluid">
+                                    </div>
+                                    <!-- empty flex-box ends-->
+                                </div>
+                            </div>
+                            <div class="container-fluid" style="flex: 1 1 auto;">
+                                <!-- select dates&terms section-->
+                                <div class="container-fluid">
+                                    <h5 style="margin-bottom:15px;">Set Due Date</h5>
+                                    <div class="input-group">
+                                        <input class="form-control" placehoder="mm/dd/yy" data-format="D, dd MM yyyy" type="text">
+                                    </div>
+                                    <div class="datepicker">
+                                    </div>
+                                </div>
+                                <!-- select dates&terms section ends-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal-body ends -->
+                    <!-- modal-footer -->
+                    <div class="modal-footer modal-footer--teaching-call">
+                        <div class="email-style container-fluid">
+                            <div class="row btn-group btn-group--position" data-toggle="buttons" style="margin-bottom: 20px;">
+                                <h5 style="margin-bottom: 15px;">Select Email Preference</h5>
+                                <label class="btn btn-white btn-sm active" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span>Begin With Email
+						</label>
+                                <label class="btn btn-white btn-sm" id="instructors-pivot">
+								<input type="radio" name="options">
+								<span></span>Begin Without Email
+							</label>
+                            </div>
+                            <div class="">
+                                <h5 class="pull-left">Email Message</h5>
+                                <textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment"></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-default">Begin Without Email</button>
+                        <button type="button" class="btn btn-info">Next</button>
+                    </div>
+                    <!-- modal-footer ends -->
+                </div>
+            </div>
+        </div>
+        <!-- modal ends -->
+
+        <link rel="stylesheet" href="assets/js/select2/select2-bootstrap.css">
+        <link rel="stylesheet" href="assets/js/select2/select2.css">
+
+        <!-- Bottom scripts (common) -->
+        <script src="assets/js/gsap/TweenMax.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/resizeable.js"></script>
+        <script src="assets/js/select2/select2.min.js"></script>
+        <!-- Multiselect library -->
+        <script src="assets/js/neon-api.js"></script>
+
+        <!-- JavaScripts initializations and stuff -->
+        <script src="assets/js/neon-custom.js"></script>
+
+</body>
+
+</html>

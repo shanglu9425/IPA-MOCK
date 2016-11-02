@@ -1,0 +1,161 @@
+/*modal css*/
+
+.flex-box {
+    display: flex;
+}
+
+.table_header--gray {
+    color: gray;
+}
+
+.table_header--margin {
+    margin-bottom: 25px;
+}
+
+.check-box-TA-call {
+    font-size: 8pt;
+}
+
+.ta-application-flex_box {
+    flex: 0 1 45%;
+}
+
+.btn-group--position {
+    flex: 0 1 100%;
+    margin-bottom: 10px;
+}
+
+.teaching-call--header_style {
+    background: #303641;
+}
+
+.teaching-call--textarea_height {
+    height: 174px !important;
+}
+
+.teaching-call--header_style h4 {
+    color: white;
+}
+
+.teaching-call--header_style button {
+    /*assign style to "x" button */
+    color: white;
+    opacity: 1;
+}
+
+.teaching-call--width {
+    width: 750px;
+}
+
+.teaching-call--info_flex {
+    flex: 0 1 45%;
+}
+
+.modal-footer--teaching-call {
+    background-color: rgb(248, 248, 248);
+}
+
+.checkbox-inline input {
+    top: -3px !important;
+}
+
+.email-style {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.ta_ta-application {
+    position: relative;
+    height: 30px;
+    padding: 6px;
+    float: left;
+    margin-right: 20px;
+    width: 100%;
+}
+
+.ta_ta-application--add-course {
+    width: 100%;
+    margin-bottom: 17px;
+    margin-right: 10%;
+}
+
+.ta-application--header_style {
+    display: block;
+    background-color: black;
+}
+
+.ta-application--info_flex {
+    flex: 0 1 45%;
+}
+
+.ta-application--requirement_style {
+    font-size: 9pt;
+    line-height: 15px;
+    padding: 10px 0px 10px 0px;
+}
+
+
+/* empty flex-box */
+
+.empty_flex_box-teaching-call {
+    flex: 0 1 5%;
+}
+
+.empty_flex_box-ta-application {
+    flex: 0 1 15%;
+}
+
+.empty_flex_box-ta-application--text-box {
+    flex: 0 1 10%;
+}
+
+.form-control--appointment-time {
+    width: 50px;
+    text-indent: 3px;
+}
+
+.form-control--add-course {
+    width: 150px;
+    text-indent: 10px;
+}
+
+
+/* modal overwrite */
+
+.modal .modal-header .close {
+    background: none;
+    display: inline-block;
+    padding: 0px 5px;
+    line-height: 1;
+    color: white;
+    zoom: 1;
+    opacity: 1 !important;
+}
+
+.ta_ta-application--add-course .selectboxit-text {
+    margin-left: 6px;
+}
+
+
+/*bootstrap overwrite*/
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.teaching-call--info_flex h5 {
+    margin-top: 0px;
+}
+
+
+/* neon overwrite */
+
+.datepicker-inline {
+    font-size: 8pt !important;
+}
+
+div.datepicker {
+    padding-left: 0px;
+    padding-right: 0px;
+}
