@@ -45,7 +45,7 @@
                 <div class="modal-content">
                     <div class="modal-header teaching-call--header_style">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">TA Call Configuration</h4>
+                        <h4 class="modal-title">Graduate Student TA Call Setting</h4>
                     </div>
                     <!-- modal-body -->
                     <div class="modal-body">
@@ -71,7 +71,7 @@
                                 <!-- collect ta preference ends-->
                                 <!-- collect required information-->
                                 <div class="row">
-                                    <h5 style="margin-bottom: 15px;">Required Information</h5>
+                                    <h5>Required Information</h5>
                                     <div class="checkbox">
                                         <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Require Eligibility Confirmation ?</label>
                                     </div>
@@ -87,14 +87,22 @@
                                     <div class="checkbox">
                                         <label class="checkbox-inline check-box-TA-call"><input type="checkbox" value="">Allow submission after due date ?</label>
                                     </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox-inline check-box-TA-call">Minimum number of preferences</label>
+                                        <div class="input-spinner">
+                                            <button type="button" class="btn btn-default">-</button>
+                                            <input class="form-control size-1" value="1" type="text">
+                                            <button type="button" class="btn btn-default">+</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- collect required information ends-->
                             </div>
                             <!-- ta-call-info section ends-->
-                            <div class="set-ta-call-duedate container-fluid">
+                            <div class="set-ta-call-duedate">
                                 <!-- select dates&terms section-->
                                 <div class="container-fluid">
-                                    <h5 style="margin-bottom:15px;">Set Due Date</h5>
+                                    <h5>Set Due Date</h5>
                                     <div class="input-group">
                                         <input class="form-control" placehoder="mm/dd/yy" data-format="D, dd MM yyyy" type="text">
                                     </div>

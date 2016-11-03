@@ -77,6 +77,71 @@
 }
 
 
+/* ta-call-config-student-summary-page (used in summary-page only)*/
+
+.ta-config-summary-title {
+    flex: 0 1 100%;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.term-quarter {
+    flex: 0 1 100%;
+    margin-bottom: 10px;
+}
+
+.people-list-section {
+    flex: 0 1 100%;
+    margin-bottom: 10px;
+}
+
+.preference-and-due_date {
+    flex: 0 1 100%;
+    margin-bottom: 10px;
+}
+
+.preference-and-due_date .row {
+    margin-bottom: 10px;
+}
+
+.info-collected-section {
+    flex: 0 1 50%;
+    margin-bottom: 25px;
+}
+
+.info-collected-list {
+    display: flex;
+    flex: 0 1 75%;
+    flex-wrap: wrap;
+}
+
+.info-collected {
+    flex: 0 1 40%;
+    margin: 5px;
+    margin-left: 0px;
+}
+
+.info-collected i {
+    /* give the check mark icon a margin */
+    margin-right: 5px;
+}
+
+.email-message {
+    flex: 0 1 100%;
+    margin-bottom: 10px;
+}
+
+.bold-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    margin-right: 5px;
+}
+
+
+/* ta-call-config-student-summary-page ends */
+
+
 /* modal overwrite */
 
 .modal .modal-header .close {
@@ -111,4 +176,11 @@
 div.datepicker {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.input-spinner {
+    /* give margin-left to Minimum number of preferences input*/
+    margin-left: 20px !important;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
