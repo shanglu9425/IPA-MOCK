@@ -3,12 +3,15 @@
     padding-bottom: 25px;
 }
 
-.assignment {
+.assignment-people_view {
     text-align: left;
-    width: 40%;
-    height: 30px;
+    width: 40% !important;
+    height: 65px;
     padding: 6px;
     margin-bottom: 17px;
+    align-self: center;
+    text-align: center;
+    position: relative;
 }
 
 .info--bg_black {
@@ -93,7 +96,7 @@
 
 .assignment-section {
     position: relative;
-    height: 60px;
+    height: 65px !important;
 }
 
 .assignment-details {

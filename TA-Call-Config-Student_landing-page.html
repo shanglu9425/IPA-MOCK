@@ -45,7 +45,7 @@
                 <div class="modal-content">
                     <div class="modal-header teaching-call--header_style">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">TA Call Summary</h4>
+                        <h4 class="modal-title">TA Call Configuration</h4>
                     </div>
                     <!-- modal-body -->
                     <div class="modal-body">
@@ -53,62 +53,61 @@
                         <div class="flex-box_column container-fluid">
                             <div class="term-quarter">
                                 <div class="row">
-                                    <h5>Term: Fall Quarter 2016</h5>
-                                </div>
-                            </div>
-                            <div class="ta-config-summary-title">
-                                <div class="row">
-                                    <h4>Graduate Student Group</h4>
+                                    <h5>Select Term</h5>
+                                    <div class="people-selector">
+                                        <select name="test " class="selectboxit " data-first-option="false ">
+										<option>Assign 30%</option>
+										<optgroup label="Faculty Preference ">
+											<option value="1 ">John, Loffer</option>
+											<option value="2 ">Lee, Chris</option>
+											<option value="3 ">Qi, Ji</option>
+											<option value="4 ">Jackson, Andrew</option>
+										</optgroup>
+										<optgroup label="Master Students ">
+											<option value="1 ">Stans, Crystal</option>
+											<option value="2 ">Smith, Steven</option>
+											<option value="3 ">Lee, Yuan</option>
+											<option value="4 ">Lu, Shang</option>
+										</optgroup>
+									</select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="people-list-section">
                                 <div class="row">
-                                    <h5>People</h5>
+                                    <h5>Select Receivers</h5>
+                                    <div class="preference-selector btn-group" data-toggle="buttons">
+                                        <label class="btn btn-white btn-sm active" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span>Phd
+						</label>
+                                        <label class="btn btn-white btn-sm" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span>Master
+						</label>
+                                        <label class="btn btn-white btn-sm" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span>Non-departmental
+						</label>
+                                        <label class="btn btn-white btn-sm" id="courses-pivot">
+							<input type="radio" name="options">
+							<span></span>Faculty
+						</label>
+                                    </div>
                                     <textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment"></textarea>
-                                </div>
-                            </div>
-                            <div class="preference-and-due_date">
-                                <div class="row">
-                                    <span class="bold-title">Preference:</span><span>TA</span>
-                                </div>
-                                <div class="row">
-                                    <span class="bold-title">Due Date:</span><span>October 11, 2016</span>
                                 </div>
                             </div>
                             <div class="info-collected-section">
                                 <div class="row">
-                                    <h5>Information Needed:</h5>
-                                    <div class="flex-box_row">
-                                        <div class="info-collected-list">
-                                            <div class="info-collected">
-                                                <i class="glyphicon glyphicon-ok"></i><span>Require Eligibility Confirmation</span>
-                                            </div>
-                                            <div class="info-collected">
-                                                <i class="glyphicon glyphicon-ok"></i><span>Collect Teaching Qualifications</span>
-                                            </div>
-                                            <div class="info-collected">
-                                                <i class="glyphicon glyphicon-ok"></i><span>Collect Preference Comments</span>
-                                            </div>
-                                            <div class="info-collected">
-                                                <i class="glyphicon glyphicon-ok"></i><span>Allow submission after due date</span>
-                                            </div>
-                                            <div class="info-collected">
-                                                <i class="glyphicon glyphicon-ok"></i><span>Collect General Comments</span>
-                                            </div>
-                                            <div class="info-collected">
-                                                <span>Minimum number of preferences: 2</span>
-                                            </div>
+                                    <h5>Search to Add</h5>
+                                    <div class="input-group" style="width: 30%;">
+                                        <input class="form-control" type="text">
+                                        <div class="input-group-addon">
+                                            <a href="#"><i class="entypo-calendar"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="email-message">
-                                <div class="row">
-                                    <h5>Email Message to Student Group:</h5>
-                                    <textarea class="form-control" placeholder="Important: Instructor Name, Due Date, and Quarter Term will all be included." rows="5" id="comment"></textarea>
-                                </div>
-                            </div>
-
 
                         </div>
                     </div>
