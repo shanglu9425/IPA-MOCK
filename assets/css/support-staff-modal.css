@@ -1,0 +1,42 @@
+.support-staff-modal-width {
+    width: 450px;
+}
+
+.support-staff-modal-header_style {
+    background: #303641;
+}
+
+.support-staff-modal-header_style h4 {
+    color: white;
+}
+
+.support-staff-modal-header_style button {
+    /*assign style to "x" button */
+    color: white;
+    opacity: 1;
+}
+
+.support-staff-modal-modal-footer {
+    background-color: rgb(248, 248, 248);
+}
+
+.support-staff-modal-appointment_time {
+    width: 50px;
+    text-indent: 3px;
+}
+
+.ta_ta-application--add-course .selectboxit-text {
+    margin-left: 6px;
+}
+
+
+/*bootstrap overwrite*/
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.teaching-call--info_flex h5 {
+    margin-top: 0px;
+}

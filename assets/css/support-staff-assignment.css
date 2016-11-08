@@ -7,10 +7,8 @@
     text-align: left;
     width: 40% !important;
     height: 65px;
-    padding: 6px;
+    padding: 6px 6px 6px 30px;
     margin-bottom: 17px;
-    align-self: center;
-    text-align: center;
     position: relative;
 }
 
@@ -40,7 +38,7 @@
 
 .people-selector {
     width: 65%;
-    margin-bottom: 17px;
+    margin-bottom: 25px;
     align-self: center;
 }
 
@@ -54,7 +52,7 @@
     align-self: center;
 }
 
-.preference-title {
+.ta-preference_title {
     padding: 5px 10px;
     font-size: 11px;
     line-height: 1.5;
@@ -80,6 +78,8 @@
     height: 30px !important;
     padding: 6px !important;
     line-height: 17.15px !important;
+    width: 40%;
+    text-align: center;
 }
 
 .assignment:hover .icon-remove_person {
@@ -107,7 +107,6 @@
 
 .assignment-detail-info {
     margin-bottom: 2px;
-    font-size: 8pt;
 }
 
 .assignment-info-section {
@@ -133,13 +132,14 @@
     color: #000;
 }
 
-.assignment {
+.assignment-course_view {
     width: 65%;
     align-self: center;
     text-align: center;
     position: relative;
     height: 30px;
     padding: 6px;
+    margin-bottom: 25px;
 }
 
 .ta-slot--width {
@@ -182,7 +182,7 @@
 
 .course-requriement {
     color: #2c7ea1;
-    right: 80%;
+    right: 70%;
     top: -1px;
     position: absolute;
 }
@@ -195,17 +195,22 @@
 
 /* flex components */
 
-.search-flex {
+.search-flex-box_row {
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
 
-.search-flex-children {
+.search-flex-box_row-children {
     flex: 0 1 35%;
 }
 
 .flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
     display: flex;
     flex-direction: row;
 }
@@ -218,17 +223,17 @@
     margin-top: 20px;
 }
 
-.flex-selector-course_view {
-    margin-top: 10px;
+.flex-box-course_view {
     display: flex;
     flex: 1 1 20%;
     flex-direction: column;
 }
 
-.flex-selector-people_view {
+.flex-box-people_view {
     display: flex;
     flex: 1 1 40%;
     flex-direction: column;
+    margin-top: 75px;
 }
 
 .flex-selector_style {
@@ -256,7 +261,7 @@
     display: flex;
 }
 
-.ta_course-section-swticher {
+.ta-preference {
     display: flex;
     margin-top: 15px;
     margin-bottom: 40px;
