@@ -180,15 +180,15 @@
     padding-bottom: 5px;
 }
 
-.course-requriement {
+.course-requirement {
     color: #2c7ea1;
     right: 70%;
     top: -1px;
     position: absolute;
 }
 
-.course-requriement:hover,
-.course-requriement:focus {
+.course-requirement:hover,
+.course-requirement:focus {
     color: #1b4e64;
 }
 
@@ -212,7 +212,7 @@
 
 .flex-column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .flex-row-children {
