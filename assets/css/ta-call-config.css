@@ -1,5 +1,9 @@
 /*ta-call-config css*/
 
+.term-selector {
+    width: 30%;
+}
+
 .ta-call-info-section {
     flex: 1 1 auto;
 }
@@ -136,6 +140,31 @@
     font-weight: 500;
     color: black;
     margin-right: 5px;
+}
+
+.receivers-input-section {
+    height: 120px;
+    overflow-y: auto;
+}
+
+.receivers-input-section .label>input {
+    /* fix checkbox position */
+    position: relative;
+    left: -6px;
+}
+
+.add_people_input {
+    flex: 0 1 200px;
+}
+
+.add_people_btn {
+    flex: 0 1 auto;
+    margin-left: 10px;
+    color: white;
+}
+
+.add_people_btn>a {
+    color: white;
 }
 
 
