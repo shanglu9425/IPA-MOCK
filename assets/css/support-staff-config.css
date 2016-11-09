@@ -4,11 +4,7 @@
     width: 30%;
 }
 
-.ta-call-info-section {
-    flex: 1 1 auto;
-}
-
-.set-ta-call-duedate {
+.config-flex-auto {
     flex: 1 1 auto;
 }
 
@@ -48,31 +44,27 @@
     font-size: 8pt;
 }
 
-.teaching-call--header_style {
+.config-header_style {
     /*make modal header color black */
     background: #303641;
 }
 
-.teaching-call--textarea_height {
+.config-textarea_height {
     height: 174px !important;
 }
 
-.teaching-call--header_style h4 {
+.config-header_style h4 {
     color: white;
 }
 
-.teaching-call--header_style button {
+.config-header_style button {
     /*assign style to "x" button */
     color: white;
     opacity: 1;
 }
 
-.teaching-call--width {
+.config-width {
     width: 750px;
-}
-
-.modal-footer--teaching-call {
-    background-color: rgb(248, 248, 248);
 }
 
 .checkbox-inline input {
@@ -83,7 +75,7 @@
 
 /* ta-call-config-student-summary-page (used in summary-page only)*/
 
-.ta-config-summary-title {
+.config-summary-title {
     flex: 0 1 100%;
     align-self: center;
     margin-bottom: 10px;
@@ -165,6 +157,17 @@
 
 .add_people_btn>a {
     color: white;
+}
+
+.disabled-tag {
+    background-color: #f0f0f1;
+    border-color: #f0f0f1;
+    cursor: not-allowed;
+}
+
+.unselected-tag {
+    background-color: #f0f0f1;
+    border-color: #ebebeb !important;
 }
 
 
