@@ -91,9 +91,6 @@
     justify-content: center;
 }
 
-
-/*bootstrap overwrite*/
-
 .row {
     margin-left: 0px;
     margin-right: 0px;
@@ -107,8 +104,6 @@
     color: gray;
 }
 
-
-/* some neon overwrite */
 
 .selectboxit .selectboxit-option-icon-container {
     margin-left: 25% !important;

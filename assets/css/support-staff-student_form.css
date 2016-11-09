@@ -1,4 +1,4 @@
-.tacall-grad-student-header {
+.student-form-header {
     text-align: center;
     padding-bottom: 5px;
     border-bottom: 2px solid rgb(235, 235, 235);
@@ -10,15 +10,15 @@
     flex-basis: row;
 }
 
-.ta-requirement {
+.student-requirement {
     flex: 0 1 30%;
 }
 
-.ta-requirement h4 {
+.student-requirement h4 {
     margin-top: 20px;
 }
 
-.move-icon {
+.move-course-icon {
     position: absolute;
     left: -30px;
     top: 15px;
@@ -27,44 +27,37 @@
     cursor: pointer;
 }
 
-.empty-flex-box_ta-course {
+.empty-flex-box_student-course {
     flex: 0 1 20%;
 }
 
-.course-requirement {
+.student-course-requirement {
     color: #2c7ea1;
     right: 75%;
     top: -1px;
     position: absolute;
 }
 
-.ta-course_add {
+.student-course_add {
     height: 30px !important;
     padding: 6px !important;
     line-height: 17.15px !important;
     width: 45%;
 }
 
-#people-view .assignment-remove {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    color: #000;
-}
-
-.ta-course-container {
+.student-course-container {
     display: flex;
     flex: 1 1 40%;
     flex-direction: column;
     margin-top: 11px;
 }
 
-.ta-course-section {
+.student-course-section {
     display: flex;
     margin-bottom: 17px;
 }
 
-.ta-course {
+.student-course {
     text-align: left;
     position: relative;
     width: 45%;
@@ -75,28 +68,28 @@
     flex: 0 1 auto;
 }
 
-.ta-course-remove {
+.student-course-remove {
     position: absolute;
     right: 0;
     top: 10px;
     color: #000;
 }
 
-.ta-course-info {
+.student-course-info {
     margin-left: 55px;
 }
 
-.ta-course_title {
+.student-course_title {
     margin-bottom: 2px !important;
 }
 
-.ta-course_details {
+.student-course_details {
     padding-top: 3px;
     font-size: 10px;
     color: rgba(44, 126, 161, 0.7);
 }
 
-.ta-preference {
+.student-preference {
     margin-bottom: 2px;
     font-size: 8pt;
 }
@@ -144,6 +137,11 @@
 
 /* overwrite */
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .main-content {
     display: block !important;
 }
@@ -190,23 +188,7 @@ textarea.form-control {
     color: #95989A;
 }
 
-
-/* Comments btn ends*/
-
-
-/* input comments modal */
-
-.comments-modal {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.comments-modal-title {
-    flex: 0 1 100%;
-}
-
-.comments-modal-content {
-    flex: 0 1 50px;
-    justify-content: center;
+.checkbox-inline input {
+    /* fix check mark icon position */
+    top: -3px !important;
 }
