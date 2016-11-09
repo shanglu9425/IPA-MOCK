@@ -55,7 +55,7 @@
     margin-bottom: 17px;
 }
 
-.instructor-course-container {
+.instructor-application {
     display: flex;
     flex-direction: row;
 }
@@ -67,12 +67,12 @@
     flex-direction: column;
 }
 
-.ta_course-section {
+.ta-section {
     flex-direction: column;
     display: flex;
 }
 
-.instructor-course-title {
+.instructor-application_title {
     margin-top: 15px;
     margin-bottom: 40px;
     align-self: center;
