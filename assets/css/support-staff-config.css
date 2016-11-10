@@ -160,14 +160,16 @@
 }
 
 .disabled-tag {
-    background-color: #f0f0f1;
+    background-color: #D9D9D9;
     border-color: #f0f0f1;
     cursor: not-allowed;
+    padding: 8.53px;
 }
 
 .unselected-tag {
-    background-color: #f0f0f1;
-    border-color: #ebebeb !important;
+    background-color: white;
+    border: 1px solid #ebebeb !important;
+    color: #303641 !important;
 }
 
 
