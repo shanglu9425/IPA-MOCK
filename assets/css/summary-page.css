@@ -2,6 +2,15 @@ body {
     color: #373e4a;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-1 {
+    flex: 1 1 auto;
+}
+
 .instructor-summary-header {
     text-align: center;
     padding-bottom: 25px;
