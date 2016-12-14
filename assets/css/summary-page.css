@@ -2,8 +2,13 @@ body {
     color: #373e4a;
 }
 
+.instructor-summary-header {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
 .summary-panel-heading {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #CCCCCC;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     display: flex;
@@ -53,19 +58,19 @@ body {
 }
 
 .summary-panel-courses {
-    border-color: #ebebeb;
+    border-color: #CCCCCC;
     border-radius: 3px;
     background-clip: padding-box;
     width: 80%;
 }
 
 .summary-panel-notices {
-    border-color: #ebebeb;
+    border-color: #CCCCCC;
     border-radius: 3px;
     background-clip: padding-box;
     width: 15%;
     position: fixed;
-    top: 1.5em;
+    top: 7.75em;
     right: 2.5em;
     position: fixed;
 }
@@ -81,11 +86,12 @@ body {
 }
 
 .notices-link {
-    color: #00A651;
+    color: #1988b6;
 }
 
 .notices-link:hover {
-    color: #008d45;
+    color: #08729E;
+    text-decoration: underline;
 }
 
 .check-mark-icon {
@@ -137,9 +143,10 @@ body {
 }
 
 .active-indicator-btn:hover {
-    background-color: #05BF60;
-    border-color: #00A651;
-    color: white !important;
+    background-color: white;
+    border: 2px solid #00A651;
+    color: #00A651;
+    text-decoration:underline;
 }
 
 .nonactive-indicator-btn {
@@ -151,9 +158,10 @@ body {
 }
 
 .nonactive-indicator-btn:hover {
-    background-color: #FF6767;
-    border-color: #FA4848;
-    color: white !important;
+    background-color: white;
+    border: 2px solid #FA4848;
+    color: #FA4848;
+    text-decoration:underline;
 }
 
 
@@ -161,14 +169,14 @@ body {
 
 .badge-term-indicator {
     position: absolute;
-    top: 14px;
+    top: 12px;
     margin-left: 10px;
     border-radius: 3px;
     display: inline-block;
-    padding: 3px 7px;
+    padding: 5px 7px;
     font-size: 12px;
     color: #fff;
     line-height: 1;
     white-space: nowrap;
-    background-color: #00A651;
+    background-color: #1988b6;
 }
