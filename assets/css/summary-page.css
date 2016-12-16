@@ -2,6 +2,10 @@ body {
     color: #373e4a;
 }
 
+i {
+    cursor: pointer;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -79,7 +83,7 @@ body {
     background-clip: padding-box;
     width: 15%;
     position: fixed;
-    top: 7.75em;
+    top: 9.98em;
     right: 2.5em;
     position: fixed;
 }
@@ -122,26 +126,12 @@ body {
     text-decoration: none;
 }
 
-
-/* remove border*/
-
 .table-border-none>tbody>tr>td,
 .table-border-none>tbody+tbody,
 .table-border-none>thead>tr>th {
+    /* remove border*/
     border: none !important;
 }
-
-
-/* future-year view style */
-
-.future-year,
-.future-year h4,
-.future-year th {
-    color: #d1d1d1;
-}
-
-
-/*preference indicator*/
 
 .active-indicator-btn {
     background-color: white;
@@ -155,7 +145,7 @@ body {
     background-color: white;
     border: 2px solid #00A651;
     color: #00A651;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .nonactive-indicator-btn {
@@ -170,16 +160,23 @@ body {
     background-color: white;
     border: 2px solid #FA4848;
     color: #FA4848;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
+.download-subscribe-icons {
+    margin: 21px 0px 8.5px 10px;
+}
 
-/* term indicator */
+.download-subscribe-icons i {
+    margin: 0px 10px 0px 10px;
+    font-size: 13pt;
+}
 
 .badge-term-indicator {
+    /* term indicator */
     position: absolute;
     top: 12px;
-    margin-left: 10px;
+    margin-left: 15px;
     border-radius: 3px;
     display: inline-block;
     padding: 5px 7px;
