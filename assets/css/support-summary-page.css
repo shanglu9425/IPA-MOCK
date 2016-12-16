@@ -15,7 +15,7 @@ i {
     flex: 1 1 auto;
 }
 
-.instructor-summary-header {
+.staff-summary-header {
     text-align: center;
     padding-bottom: 25px;
 }
@@ -159,6 +159,12 @@ i {
     text-decoration: underline;
 }
 
+.quarter-header {
+    flex: 1 1 auto;
+    align-self: center;
+    position: relative;
+}
+
 .download-subscribe-icons {
     margin: 21px 0px 8.5px 10px;
 }
@@ -171,7 +177,7 @@ i {
 .badge-term-indicator {
     /* term indicator */
     position: absolute;
-    top: 12px;
+    top: 7px;
     margin-left: 15px;
     border-radius: 3px;
     display: inline-block;
